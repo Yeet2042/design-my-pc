@@ -16,7 +16,7 @@ namespace DesignMyPC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LandingPage());
+            Application.Run(new MainForm());
         }
     }
 }
