@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ContainerPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // ContainerPanel
+            // 
+            this.ContainerPanel.Location = new System.Drawing.Point(0, 0);
+            this.ContainerPanel.Name = "ContainerPanel";
+            this.ContainerPanel.Size = new System.Drawing.Size(1280, 720);
+            this.ContainerPanel.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -36,8 +44,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.ContainerPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
@@ -47,5 +55,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel ContainerPanel;
     }
 }

@@ -35,7 +35,7 @@
             this.StartButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.RegisterButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,6 +100,7 @@
             this.StartButton.TabIndex = 5;
             this.StartButton.Text = "เริ่มออกแบบ!";
             this.StartButton.UseVisualStyleBackColor = false;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // label1
             // 
@@ -123,19 +124,20 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // RegisterButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(269, 485);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(215, 44);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "ยังไม่มีบัญชี? สมัครเลย!";
-            this.button1.UseVisualStyleBackColor = false;
+            this.RegisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.RegisterButton.FlatAppearance.BorderSize = 0;
+            this.RegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterButton.ForeColor = System.Drawing.Color.White;
+            this.RegisterButton.Location = new System.Drawing.Point(269, 485);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(215, 44);
+            this.RegisterButton.TabIndex = 7;
+            this.RegisterButton.Text = "ยังไม่มีบัญชี? สมัครเลย!";
+            this.RegisterButton.UseVisualStyleBackColor = false;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // LandingPage
             // 
@@ -143,7 +145,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.label5);
@@ -170,6 +172,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button RegisterButton;
     }
 }

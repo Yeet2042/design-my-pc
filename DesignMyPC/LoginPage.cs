@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace DesignMyPC
 {
-    public partial class MainForm : Form
+    public partial class LoginPage : Form
     {
-        public MainForm()
+        public Panel ContainerPanel;
+        public LoginPage(Panel panel)
         {
             InitializeComponent();
+            ContainerPanel = panel;
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void RegisterButtonInLogin_Click(object sender, EventArgs e)
         {
-            LandingPage f = new LandingPage(ContainerPanel);
-            f.TopLevel = false;
-            ContainerPanel.Controls.Add(f);
-            f.Show();
+            ContainerPanel.Controls.Clear();
         }
     }
 }

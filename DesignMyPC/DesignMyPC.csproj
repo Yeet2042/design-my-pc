@@ -52,6 +52,12 @@
     <Compile Include="LandingPage.Designer.cs">
       <DependentUpon>LandingPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LandingPage.resx">
       <DependentUpon>LandingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -94,6 +103,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_icon_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_icon_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jigsaw_147px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guage_147px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
