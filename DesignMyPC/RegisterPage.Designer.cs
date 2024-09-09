@@ -31,20 +31,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.BirthPicker = new System.Windows.Forms.DateTimePicker();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.StartButton = new System.Windows.Forms.Button();
+            this.SurNameTextBox = new System.Windows.Forms.TextBox();
+            this.RegisterButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,17 +54,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.ConfirmPasswordTextBox = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.TermsCheckBox = new System.Windows.Forms.CheckBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.MinimizeButton = new System.Windows.Forms.Button();
@@ -105,7 +105,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.UsernameTextBox);
             this.panel1.Location = new System.Drawing.Point(144, 161);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(285, 44);
@@ -120,24 +120,24 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // UsernameTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(49, 10);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 24);
-            this.textBox1.TabIndex = 3;
+            this.UsernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UsernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameTextBox.ForeColor = System.Drawing.Color.White;
+            this.UsernameTextBox.Location = new System.Drawing.Point(49, 10);
+            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(10);
+            this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.Size = new System.Drawing.Size(226, 24);
+            this.UsernameTextBox.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.NameTextBox);
             this.panel2.Location = new System.Drawing.Point(144, 234);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(138, 44);
@@ -152,36 +152,36 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox2
+            // NameTextBox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(49, 10);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(10);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(79, 24);
-            this.textBox2.TabIndex = 3;
+            this.NameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.NameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameTextBox.ForeColor = System.Drawing.Color.White;
+            this.NameTextBox.Location = new System.Drawing.Point(49, 10);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(10);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(79, 24);
+            this.NameTextBox.TabIndex = 3;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel4.Controls.Add(this.dateTimePicker1);
+            this.panel4.Controls.Add(this.BirthPicker);
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Location = new System.Drawing.Point(144, 307);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(285, 44);
             this.panel4.TabIndex = 8;
             // 
-            // dateTimePicker1
+            // BirthPicker
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(49, 12);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(226, 22);
-            this.dateTimePicker1.TabIndex = 6;
+            this.BirthPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirthPicker.Location = new System.Drawing.Point(49, 12);
+            this.BirthPicker.Name = "BirthPicker";
+            this.BirthPicker.Size = new System.Drawing.Size(226, 22);
+            this.BirthPicker.TabIndex = 6;
             // 
             // pictureBox4
             // 
@@ -197,7 +197,7 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel5.Controls.Add(this.pictureBox5);
-            this.panel5.Controls.Add(this.textBox5);
+            this.panel5.Controls.Add(this.EmailTextBox);
             this.panel5.Location = new System.Drawing.Point(144, 380);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(285, 44);
@@ -212,24 +212,24 @@
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
             // 
-            // textBox5
+            // EmailTextBox
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(49, 10);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(10);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(226, 24);
-            this.textBox5.TabIndex = 3;
+            this.EmailTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailTextBox.ForeColor = System.Drawing.Color.White;
+            this.EmailTextBox.Location = new System.Drawing.Point(49, 10);
+            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(10);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(226, 24);
+            this.EmailTextBox.TabIndex = 3;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel6.Controls.Add(this.pictureBox6);
-            this.panel6.Controls.Add(this.textBox6);
+            this.panel6.Controls.Add(this.SurNameTextBox);
             this.panel6.Location = new System.Drawing.Point(291, 234);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(138, 44);
@@ -244,31 +244,32 @@
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
             // 
-            // textBox6
+            // SurNameTextBox
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(49, 10);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(10);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(79, 24);
-            this.textBox6.TabIndex = 3;
+            this.SurNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.SurNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SurNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SurNameTextBox.ForeColor = System.Drawing.Color.White;
+            this.SurNameTextBox.Location = new System.Drawing.Point(49, 10);
+            this.SurNameTextBox.Margin = new System.Windows.Forms.Padding(10);
+            this.SurNameTextBox.Name = "SurNameTextBox";
+            this.SurNameTextBox.Size = new System.Drawing.Size(79, 24);
+            this.SurNameTextBox.TabIndex = 3;
             // 
-            // StartButton
+            // RegisterButton
             // 
-            this.StartButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.StartButton.FlatAppearance.BorderSize = 0;
-            this.StartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartButton.ForeColor = System.Drawing.Color.White;
-            this.StartButton.Location = new System.Drawing.Point(144, 556);
-            this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(285, 44);
-            this.StartButton.TabIndex = 14;
-            this.StartButton.Text = "สมัครสมาชิก";
-            this.StartButton.UseVisualStyleBackColor = false;
+            this.RegisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.RegisterButton.FlatAppearance.BorderSize = 0;
+            this.RegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterButton.ForeColor = System.Drawing.Color.White;
+            this.RegisterButton.Location = new System.Drawing.Point(144, 556);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(285, 44);
+            this.RegisterButton.TabIndex = 14;
+            this.RegisterButton.Text = "สมัครสมาชิก";
+            this.RegisterButton.UseVisualStyleBackColor = false;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // label9
             // 
@@ -345,7 +346,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.ConfirmPasswordTextBox);
             this.panel3.Location = new System.Drawing.Point(291, 453);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(138, 44);
@@ -360,24 +361,24 @@
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
-            // textBox3
+            // ConfirmPasswordTextBox
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(49, 10);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(10);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(79, 24);
-            this.textBox3.TabIndex = 3;
+            this.ConfirmPasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.ConfirmPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ConfirmPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmPasswordTextBox.ForeColor = System.Drawing.Color.White;
+            this.ConfirmPasswordTextBox.Location = new System.Drawing.Point(49, 10);
+            this.ConfirmPasswordTextBox.Margin = new System.Windows.Forms.Padding(10);
+            this.ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
+            this.ConfirmPasswordTextBox.Size = new System.Drawing.Size(79, 24);
+            this.ConfirmPasswordTextBox.TabIndex = 3;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel8.Controls.Add(this.pictureBox8);
-            this.panel8.Controls.Add(this.textBox7);
+            this.panel8.Controls.Add(this.PasswordTextBox);
             this.panel8.Location = new System.Drawing.Point(144, 453);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(138, 44);
@@ -392,17 +393,17 @@
             this.pictureBox8.TabIndex = 5;
             this.pictureBox8.TabStop = false;
             // 
-            // textBox7
+            // PasswordTextBox
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.White;
-            this.textBox7.Location = new System.Drawing.Point(49, 10);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(10);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(79, 24);
-            this.textBox7.TabIndex = 3;
+            this.PasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextBox.ForeColor = System.Drawing.Color.White;
+            this.PasswordTextBox.Location = new System.Drawing.Point(49, 10);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(10);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(79, 24);
+            this.PasswordTextBox.TabIndex = 3;
             // 
             // label11
             // 
@@ -471,17 +472,17 @@
             this.label10.TabIndex = 35;
             this.label10.Text = "บันทึกการออกแบบของคุณและแชร์กับเพื่อน\r\n";
             // 
-            // checkBox1
+            // TermsCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(144, 506);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(198, 24);
-            this.checkBox1.TabIndex = 36;
-            this.checkBox1.Text = "ยอมรับเงื่อนไข และ ข้อตกลง";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.TermsCheckBox.AutoSize = true;
+            this.TermsCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TermsCheckBox.ForeColor = System.Drawing.Color.White;
+            this.TermsCheckBox.Location = new System.Drawing.Point(144, 506);
+            this.TermsCheckBox.Name = "TermsCheckBox";
+            this.TermsCheckBox.Size = new System.Drawing.Size(198, 24);
+            this.TermsCheckBox.TabIndex = 36;
+            this.TermsCheckBox.Text = "ยอมรับเงื่อนไข และ ข้อตกลง";
+            this.TermsCheckBox.UseVisualStyleBackColor = true;
             // 
             // pictureBox7
             // 
@@ -561,7 +562,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.LoginButtonInRegister);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.TermsCheckBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
@@ -579,7 +580,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.StartButton);
+            this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
@@ -627,20 +628,20 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox UsernameTextBox;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox EmailTextBox;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button StartButton;
+        private System.Windows.Forms.TextBox SurNameTextBox;
+        private System.Windows.Forms.DateTimePicker BirthPicker;
+        private System.Windows.Forms.Button RegisterButton;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -650,10 +651,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ConfirmPasswordTextBox;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -662,7 +663,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox TermsCheckBox;
         private System.Windows.Forms.Button LoginButtonInRegister;
     }
 }

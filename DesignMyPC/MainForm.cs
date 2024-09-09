@@ -16,6 +16,17 @@ namespace DesignMyPC
         {
             InitializeComponent();
             Global.MainContainerPanel = ContainerPanel;
+
+            Global.UserDT.Columns.Add("id", typeof(string));
+            Global.UserDT.Columns.Add("username", typeof(string));
+            Global.UserDT.Columns.Add("name", typeof(string));
+            Global.UserDT.Columns.Add("surname", typeof(string));
+            Global.UserDT.Columns.Add("birth", typeof(string));
+            Global.UserDT.Columns.Add("email", typeof(string));
+            Global.UserDT.Columns.Add("password", typeof(string));
+            Global.UserDT.Columns.Add("role", typeof(string));
+
+            Global.UserDT.Rows.Add("001", "admin", "admin", "admin", "11/11/1991", "admin@admin.com", "admin", "admin");
         }
 
         private void MainForm_Load(object sender, EventArgs e)

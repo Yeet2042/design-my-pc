@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,8 @@ namespace DesignMyPC
         public static Form LoginPage;
         public static Form RegisterPage;
 
+        public static DataTable UserDT = new DataTable();
+
         public static void CloseApplication()
         {
             Application.Exit();
@@ -25,16 +28,44 @@ namespace DesignMyPC
 
         public static void OpenLoginPage()
         {
-            Global.MainContainerPanel.Controls.Clear();
-            Global.MainContainerPanel.Controls.Add(LoginPage);
+            MainContainerPanel.Controls.Clear();
+            MainContainerPanel.Controls.Add(LoginPage);
             LoginPage.Show();
         }
 
         public static void OpenRegisterPage()
         {
-            Global.MainContainerPanel.Controls.Clear();
-            Global.MainContainerPanel.Controls.Add(RegisterPage);
+            MainContainerPanel.Controls.Clear();
+            MainContainerPanel.Controls.Add(RegisterPage);
             RegisterPage.Show();
+        }
+
+        private static string AutoID(string prefix, DataTable dt)
+        {
+            string newID;
+            int rowMax = dt.Rows.Count - 1;
+            string ID = dt.Rows[rowMax]["id"].ToString().Substring(prefix.Length, 3);
+            int n = Convert.ToInt32(ID) + 1;
+            newID = prefix + n.ToString("000");
+            return newID;
+        }
+
+        public static void CreateUser(string username,
+            string name,
+            string surname,
+            string birth,
+            string email,
+            string password,
+            string role)
+        {
+            UserDT.Rows.Add(AutoID("", UserDT),
+                username,
+                name,
+                surname,
+                birth,
+                email,
+                password,
+                role);
         }
     }
 }
