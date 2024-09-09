@@ -30,16 +30,20 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.RegisterButtonInLogin = new System.Windows.Forms.Button();
             this.StartButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,8 +53,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -61,32 +67,26 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MinimizeButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.LoginButtonInRegister = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -111,6 +111,15 @@
             this.panel1.Size = new System.Drawing.Size(285, 44);
             this.panel1.TabIndex = 13;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DesignMyPC.Properties.Resources.user_icon_24px;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
@@ -133,6 +142,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(138, 44);
             this.panel2.TabIndex = 7;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DesignMyPC.Properties.Resources.user_icon_24px;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // textBox2
             // 
@@ -157,6 +175,23 @@
             this.panel4.Size = new System.Drawing.Size(285, 44);
             this.panel4.TabIndex = 8;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(49, 12);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(226, 22);
+            this.dateTimePicker1.TabIndex = 6;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::DesignMyPC.Properties.Resources.calendar_icon_24px;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
@@ -167,6 +202,15 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(285, 44);
             this.panel5.TabIndex = 8;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::DesignMyPC.Properties.Resources.email_icon_24px;
+            this.pictureBox5.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
             // 
             // textBox5
             // 
@@ -191,6 +235,15 @@
             this.panel6.Size = new System.Drawing.Size(138, 44);
             this.panel6.TabIndex = 8;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::DesignMyPC.Properties.Resources.user_icon_24px;
+            this.pictureBox6.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
@@ -202,28 +255,6 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(79, 24);
             this.textBox6.TabIndex = 3;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(49, 12);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(226, 22);
-            this.dateTimePicker1.TabIndex = 6;
-            // 
-            // RegisterButtonInLogin
-            // 
-            this.RegisterButtonInLogin.FlatAppearance.BorderSize = 0;
-            this.RegisterButtonInLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisterButtonInLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterButtonInLogin.ForeColor = System.Drawing.Color.White;
-            this.RegisterButtonInLogin.Location = new System.Drawing.Point(257, 615);
-            this.RegisterButtonInLogin.Name = "RegisterButtonInLogin";
-            this.RegisterButtonInLogin.Size = new System.Drawing.Size(172, 31);
-            this.RegisterButtonInLogin.TabIndex = 15;
-            this.RegisterButtonInLogin.Text = "มีบัญชีอยู่แล้ว? เข้าสู่ระบบ";
-            this.RegisterButtonInLogin.UseVisualStyleBackColor = true;
-            this.RegisterButtonInLogin.Click += new System.EventHandler(this.RegisterButtonInLogin_Click);
             // 
             // StartButton
             // 
@@ -320,6 +351,15 @@
             this.panel3.Size = new System.Drawing.Size(138, 44);
             this.panel3.TabIndex = 10;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DesignMyPC.Properties.Resources.lock_icon_24px;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
@@ -342,6 +382,15 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(138, 44);
             this.panel8.TabIndex = 9;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::DesignMyPC.Properties.Resources.lock_icon_24px;
+            this.pictureBox8.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox8.TabIndex = 5;
+            this.pictureBox8.TabStop = false;
             // 
             // textBox7
             // 
@@ -452,69 +501,6 @@
             this.pictureBox9.TabIndex = 28;
             this.pictureBox9.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::DesignMyPC.Properties.Resources.lock_icon_24px;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::DesignMyPC.Properties.Resources.lock_icon_24px;
-            this.pictureBox8.Location = new System.Drawing.Point(12, 10);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox8.TabIndex = 5;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::DesignMyPC.Properties.Resources.user_icon_24px;
-            this.pictureBox6.Location = new System.Drawing.Point(12, 10);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::DesignMyPC.Properties.Resources.calendar_icon_24px;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 10);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::DesignMyPC.Properties.Resources.email_icon_24px;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 10);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox5.TabIndex = 5;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DesignMyPC.Properties.Resources.user_icon_24px;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesignMyPC.Properties.Resources.user_icon_24px;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // MinimizeButton
             // 
             this.MinimizeButton.FlatAppearance.BorderSize = 0;
@@ -554,12 +540,27 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "    DesignMyPC";
             // 
+            // LoginButtonInRegister
+            // 
+            this.LoginButtonInRegister.FlatAppearance.BorderSize = 0;
+            this.LoginButtonInRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginButtonInRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButtonInRegister.ForeColor = System.Drawing.Color.White;
+            this.LoginButtonInRegister.Location = new System.Drawing.Point(256, 613);
+            this.LoginButtonInRegister.Name = "LoginButtonInRegister";
+            this.LoginButtonInRegister.Size = new System.Drawing.Size(173, 31);
+            this.LoginButtonInRegister.TabIndex = 37;
+            this.LoginButtonInRegister.Text = "มีบัญชีอยู่แล้ว? เข้าสู่ระบบ";
+            this.LoginButtonInRegister.UseVisualStyleBackColor = true;
+            this.LoginButtonInRegister.Click += new System.EventHandler(this.LoginButtonInRegister_Click);
+            // 
             // RegisterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.LoginButtonInRegister);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
@@ -578,7 +579,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.RegisterButtonInLogin);
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
@@ -594,26 +594,26 @@
             this.Text = "RegisterPage";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -640,7 +640,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button RegisterButtonInLogin;
         private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
@@ -664,5 +663,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button LoginButtonInRegister;
     }
 }

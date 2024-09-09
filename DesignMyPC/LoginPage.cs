@@ -19,21 +19,17 @@ namespace DesignMyPC
 
         private void RegisterButtonInLogin_Click(object sender, EventArgs e)
         {
-            MainForm.MainContainerPanel.Controls.Clear();
-            RegisterPage f = new RegisterPage();
-            f.TopLevel = false;
-            MainForm.MainContainerPanel.Controls.Add(f);
-            f.Show();
+            Global.OpenRegisterPage();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            MainForm.CloseApplication();
+            Global.CloseApplication();
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
         {
-            MainForm.MinimizeApplication();
+            Global.MinimizeApplication();
         }
     }
 }

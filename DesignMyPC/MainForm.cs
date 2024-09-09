@@ -12,29 +12,27 @@ namespace DesignMyPC
 {
     public partial class MainForm : Form
     {
-        public static Panel MainContainerPanel;
         public MainForm()
         {
             InitializeComponent();
-            MainContainerPanel = ContainerPanel;
+            Global.MainContainerPanel = ContainerPanel;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            LandingPage f = new LandingPage();
-            f.TopLevel = false;
-            MainContainerPanel.Controls.Add(f);
-            f.Show();
-        }
+            LandingPage landingPage = new LandingPage();
+            LoginPage loginPage = new LoginPage();
+            RegisterPage registerPage = new RegisterPage();
 
-        public static void CloseApplication()
-        {
-            Application.Exit();
-        }
+            landingPage.TopLevel = false;
+            loginPage.TopLevel = false;
+            registerPage.TopLevel = false;
 
-        public static void MinimizeApplication()
-        {
-            Application.OpenForms["MainForm"].WindowState = FormWindowState.Minimized;
+            Global.LoginPage = loginPage;
+            Global.RegisterPage = registerPage;
+
+            ContainerPanel.Controls.Add(landingPage);
+            landingPage.Show();
         }
     }
 }
