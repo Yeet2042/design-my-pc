@@ -67,5 +67,28 @@ namespace DesignMyPC
                 password,
                 role);
         }
+
+        public static bool Login(string username, string password)
+        {
+            bool success = false;
+            foreach (DataRow row in UserDT.Rows)
+            {
+                if (row["username"].ToString() == username)
+                {
+                    if (row["password"].ToString() == password)
+                    {
+                        success = true;
+                        break;
+                    }
+                    else
+                    {
+                        success = false;
+                        break;
+                    }
+                }
+
+            }
+            return success;
+        }
     }
 }

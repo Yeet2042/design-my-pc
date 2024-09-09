@@ -31,5 +31,25 @@ namespace DesignMyPC
         {
             Global.MinimizeApplication();
         }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            if (UsernameTextBox.Text == "" ||
+                PasswordTextBox.Text == "")
+            {
+                MessageBox.Show("กรุณากรอกข้อมูลให้ครบถ้วน!");
+            }
+            else
+            {
+                if (Global.Login(UsernameTextBox.Text, PasswordTextBox.Text))
+                {
+                    MessageBox.Show("เข้าสู่ระบบสำเร็จ");
+                }
+                else
+                {
+                    MessageBox.Show("ชื่อผู็ใช้หรือรหัสผ่านไม่ถูกต้อง!");
+                }
+            }
+        }
     }
 }
