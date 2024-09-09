@@ -33,9 +33,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.StartButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.RegisterButton = new System.Windows.Forms.Button();
+            this.CloseButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.MinimizeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,28 +104,6 @@
             this.StartButton.UseVisualStyleBackColor = false;
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Image = global::DesignMyPC.Properties.Resources.logo_24px;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(18, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "    DesignMyPC";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesignMyPC.Properties.Resources.pc_components;
-            this.pictureBox1.Location = new System.Drawing.Point(671, -423);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(694, 1225);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // RegisterButton
             // 
             this.RegisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
@@ -139,12 +119,62 @@
             this.RegisterButton.UseVisualStyleBackColor = false;
             this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
+            // CloseButton
+            // 
+            this.CloseButton.FlatAppearance.BorderSize = 0;
+            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseButton.Image = global::DesignMyPC.Properties.Resources.close_icon_24px;
+            this.CloseButton.Location = new System.Drawing.Point(1232, 18);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(0);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(30, 30);
+            this.CloseButton.TabIndex = 8;
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DesignMyPC.Properties.Resources.pc_components;
+            this.pictureBox1.Location = new System.Drawing.Point(671, -423);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(694, 1225);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Image = global::DesignMyPC.Properties.Resources.logo_24px;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(18, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "    DesignMyPC";
+            // 
+            // MinimizeButton
+            // 
+            this.MinimizeButton.FlatAppearance.BorderSize = 0;
+            this.MinimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinimizeButton.Image = global::DesignMyPC.Properties.Resources.minimize_icon_24px;
+            this.MinimizeButton.Location = new System.Drawing.Point(1189, 18);
+            this.MinimizeButton.Margin = new System.Windows.Forms.Padding(0);
+            this.MinimizeButton.Name = "MinimizeButton";
+            this.MinimizeButton.Size = new System.Drawing.Size(30, 30);
+            this.MinimizeButton.TabIndex = 9;
+            this.MinimizeButton.UseVisualStyleBackColor = true;
+            this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
+            // 
             // LandingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.MinimizeButton);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.StartButton);
@@ -173,5 +203,7 @@
         private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button RegisterButton;
+        private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Button MinimizeButton;
     }
 }

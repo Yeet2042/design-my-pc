@@ -46,6 +46,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.MinimizeButton = new System.Windows.Forms.Button();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -256,12 +258,40 @@
             this.label8.Text = "โปรแกรมจะตรวจสอบให้แน่ใจว่าชิ้นส่วนที่คุณเลือก\r\nสามารถทำงานร่วมกันได้อย่างราบรื่น" +
     "";
             // 
+            // MinimizeButton
+            // 
+            this.MinimizeButton.FlatAppearance.BorderSize = 0;
+            this.MinimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinimizeButton.Image = global::DesignMyPC.Properties.Resources.minimize_icon_24px;
+            this.MinimizeButton.Location = new System.Drawing.Point(1189, 18);
+            this.MinimizeButton.Margin = new System.Windows.Forms.Padding(0);
+            this.MinimizeButton.Name = "MinimizeButton";
+            this.MinimizeButton.Size = new System.Drawing.Size(30, 30);
+            this.MinimizeButton.TabIndex = 18;
+            this.MinimizeButton.UseVisualStyleBackColor = true;
+            this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.FlatAppearance.BorderSize = 0;
+            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseButton.Image = global::DesignMyPC.Properties.Resources.close_icon_24px;
+            this.CloseButton.Location = new System.Drawing.Point(1232, 18);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(0);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(30, 30);
+            this.CloseButton.TabIndex = 17;
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.MinimizeButton);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -313,5 +343,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button MinimizeButton;
+        private System.Windows.Forms.Button CloseButton;
     }
 }

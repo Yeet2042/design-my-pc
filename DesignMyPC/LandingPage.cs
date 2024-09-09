@@ -35,5 +35,15 @@ namespace DesignMyPC
             MainForm.MainContainerPanel.Controls.Add(f);
             f.Show();
         }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MinimizeButton_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms["MainForm"].WindowState = FormWindowState.Minimized;
+        }
     }
 }

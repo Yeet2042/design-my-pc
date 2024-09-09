@@ -125,5 +125,11 @@
   <ItemGroup>
     <None Include="Resources\guage_147px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_icon_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_icon_24px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

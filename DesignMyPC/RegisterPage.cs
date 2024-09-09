@@ -16,5 +16,15 @@ namespace DesignMyPC
         {
             InitializeComponent();
         }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MinimizeButton_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms["MainForm"].WindowState = FormWindowState.Minimized;
+        }
     }
 }
