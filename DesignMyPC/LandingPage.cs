@@ -38,12 +38,12 @@ namespace DesignMyPC
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            MainForm.CloseApplication();
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
         {
-            Application.OpenForms["MainForm"].WindowState = FormWindowState.Minimized;
+            MainForm.MinimizeApplication();
         }
     }
 }

@@ -48,6 +48,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.MinimizeButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,7 +63,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(161, 236);
+            this.label2.Location = new System.Drawing.Point(161, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(255, 42);
             this.label2.TabIndex = 2;
@@ -85,7 +87,7 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(144, 306);
+            this.panel1.Location = new System.Drawing.Point(144, 287);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(285, 44);
             this.panel1.TabIndex = 4;
@@ -105,7 +107,7 @@
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Location = new System.Drawing.Point(144, 367);
+            this.panel2.Location = new System.Drawing.Point(144, 360);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(285, 44);
             this.panel2.TabIndex = 6;
@@ -138,7 +140,7 @@
             this.StartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartButton.ForeColor = System.Drawing.Color.White;
-            this.StartButton.Location = new System.Drawing.Point(144, 442);
+            this.StartButton.Location = new System.Drawing.Point(144, 436);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(285, 44);
             this.StartButton.TabIndex = 7;
@@ -151,7 +153,7 @@
             this.RegisterButtonInLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterButtonInLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterButtonInLogin.ForeColor = System.Drawing.Color.White;
-            this.RegisterButtonInLogin.Location = new System.Drawing.Point(261, 501);
+            this.RegisterButtonInLogin.Location = new System.Drawing.Point(261, 495);
             this.RegisterButtonInLogin.Name = "RegisterButtonInLogin";
             this.RegisterButtonInLogin.Size = new System.Drawing.Size(168, 31);
             this.RegisterButtonInLogin.TabIndex = 8;
@@ -284,12 +286,34 @@
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(153, 266);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "ชื่อผู้ใช้ / อีเมลล์";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(153, 339);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "รหัสผ่าน";
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.MinimizeButton);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.label8);
@@ -345,5 +369,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button MinimizeButton;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
