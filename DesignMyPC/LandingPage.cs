@@ -12,26 +12,28 @@ namespace DesignMyPC
 {
     public partial class LandingPage : Form
     {
-        private Panel ContainerPanel;
-        public LandingPage(Panel panel)
+        public LandingPage()
         {
             InitializeComponent();
-            ContainerPanel = panel;
         }
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            ContainerPanel.Controls.Clear();
-            LoginPage f = new LoginPage(ContainerPanel);
+            MainForm.MainContainerPanel.Controls.Clear();
+            LoginPage f = new LoginPage();
             f.TopLevel = false;
-            ContainerPanel.Controls.Add(f);
+            MainForm.MainContainerPanel.Controls.Add(f);
             f.Show();
             
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-            ContainerPanel.Controls.Clear();
+            MainForm.MainContainerPanel.Controls.Clear();
+            RegisterPage f = new RegisterPage();
+            f.TopLevel = false;
+            MainForm.MainContainerPanel.Controls.Add(f);
+            f.Show();
         }
     }
 }

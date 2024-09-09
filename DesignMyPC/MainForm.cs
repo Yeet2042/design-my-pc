@@ -12,16 +12,18 @@ namespace DesignMyPC
 {
     public partial class MainForm : Form
     {
+        public static Panel MainContainerPanel;
         public MainForm()
         {
             InitializeComponent();
+            MainContainerPanel = ContainerPanel;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            LandingPage f = new LandingPage(ContainerPanel);
+            LandingPage f = new LandingPage();
             f.TopLevel = false;
-            ContainerPanel.Controls.Add(f);
+            MainContainerPanel.Controls.Add(f);
             f.Show();
         }
     }

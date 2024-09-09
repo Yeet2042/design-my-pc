@@ -12,16 +12,18 @@ namespace DesignMyPC
 {
     public partial class LoginPage : Form
     {
-        public Panel ContainerPanel;
-        public LoginPage(Panel panel)
+        public LoginPage()
         {
             InitializeComponent();
-            ContainerPanel = panel;
         }
 
         private void RegisterButtonInLogin_Click(object sender, EventArgs e)
         {
-            ContainerPanel.Controls.Clear();
+            MainForm.MainContainerPanel.Controls.Clear();
+            RegisterPage f = new RegisterPage();
+            f.TopLevel = false;
+            MainForm.MainContainerPanel.Controls.Add(f);
+            f.Show();
         }
     }
 }
