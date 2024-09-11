@@ -16,6 +16,7 @@ namespace DesignMyPC
         public static Form Dashboard;
 
         public static DataTable UserDT = new DataTable();
+        public static DataTable PcDT = new DataTable();
 
         public static string LogInID;
         public static string LogInUser;

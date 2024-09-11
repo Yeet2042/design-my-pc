@@ -39,7 +39,7 @@
             this.MinimizeButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.DashboardContainer = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -207,12 +207,12 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "    DesignMyPC";
             // 
-            // panel1
+            // DashboardContainer
             // 
-            this.panel1.Location = new System.Drawing.Point(320, 132);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(928, 556);
-            this.panel1.TabIndex = 22;
+            this.DashboardContainer.Location = new System.Drawing.Point(320, 128);
+            this.DashboardContainer.Name = "DashboardContainer";
+            this.DashboardContainer.Size = new System.Drawing.Size(928, 560);
+            this.DashboardContainer.TabIndex = 22;
             // 
             // label2
             // 
@@ -244,7 +244,7 @@
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.DashboardContainer);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DashboardLabel);
             this.Controls.Add(this.SettingButton);
@@ -278,7 +278,7 @@
         private System.Windows.Forms.Button SettingButton;
         private System.Windows.Forms.Label DashboardLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel DashboardContainer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label NameLabel;
     }

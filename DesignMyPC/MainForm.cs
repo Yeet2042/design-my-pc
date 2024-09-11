@@ -27,6 +27,28 @@ namespace DesignMyPC
             Global.UserDT.Columns.Add("role", typeof(string));
 
             Global.UserDT.Rows.Add("001", "admin", "admin", "admin", "11/11/1991", "admin@admin.com", "admin", "admin");
+            Global.UserDT.Rows.Add("002", "user", "user", "user", "22/22/2000", "user@user.com", "user", "user");
+
+            Global.PcDT.Columns.Add("id", typeof(string));
+            Global.PcDT.Columns.Add("author_id", typeof(string));
+            Global.PcDT.Columns.Add("name", typeof(string));
+            Global.PcDT.Columns.Add("cpu", typeof(string));
+            Global.PcDT.Columns.Add("mb", typeof(string));
+            Global.PcDT.Columns.Add("ram", typeof(string));
+            Global.PcDT.Columns.Add("gpu", typeof(string));
+            Global.PcDT.Columns.Add("ssd", typeof(string));
+            Global.PcDT.Columns.Add("hdd", typeof(string));
+            Global.PcDT.Columns.Add("psu", typeof(string));
+            Global.PcDT.Columns.Add("cooler", typeof(string));
+            Global.PcDT.Columns.Add("case", typeof(string));
+            Global.PcDT.Columns.Add("price", typeof(uint));
+            Global.PcDT.Columns.Add("efficient", typeof(uint));
+            Global.PcDT.Columns.Add("cooling", typeof(uint));
+            Global.PcDT.Columns.Add("wattage", typeof(uint));
+
+            Global.PcDT.Rows.Add("001", "001", "Super PC", "AMD Ryzen 9 9950X", "ASUS ROG STRIX X670E-E", "64GB", "ASUS ROG STRIX RTX4090", "2TB", "", "ASUS THOR 1000W", "ROG RUIJIN III AIO 350W", "NZXT H9 Elite", 199000, 100, 100, 750);
+            Global.PcDT.Rows.Add("002", "001", "Mid PC", "AMD Ryzen 9 9950X", "ASUS ROG STRIX X670E-E", "64GB", "ASUS ROG STRIX RTX4090", "2TB", "", "ASUS THOR 1000W", "ROG RUIJIN III AIO 350W", "NZXT H9 Elite", 199000, 100, 100, 750);
+            Global.PcDT.Rows.Add("003", "001", "Lowend PC", "AMD Ryzen 9 9950X", "ASUS ROG STRIX X670E-E", "64GB", "ASUS ROG STRIX RTX4090", "2TB", "", "ASUS THOR 1000W", "ROG RUIJIN III AIO 350W", "NZXT H9 Elite", 199000, 100, 100, 750);
         }
 
         private void MainForm_Load(object sender, EventArgs e)

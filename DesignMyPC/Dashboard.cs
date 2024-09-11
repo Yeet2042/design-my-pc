@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesignMyPC.InsideDashboard;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,21 @@ namespace DesignMyPC
 {
     public partial class Dashboard : Form
     {
+        private Form Home;
         public Dashboard()
         {
             InitializeComponent();
 
             HomeButton.BackColor = Color.FromArgb(42, 54, 80);
             DashboardLabel.Text = Global.DashboardSelectedPage.Trim();
+
+            InsideDashboard.HomePage homePage = new InsideDashboard.HomePage();
+
+            homePage.TopLevel = false;
+
+            Home = homePage;
+
+            OpenHomePage();
 
             if (Global.LogInRole == "admin")
             {
@@ -33,6 +43,13 @@ namespace DesignMyPC
             }
 
             NameLabel.Text = Global.LogInName;
+        }
+
+        private void OpenHomePage()
+        {
+            DashboardContainer.Controls.Clear();
+            DashboardContainer.Controls.Add(Home);
+            Home.Show();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

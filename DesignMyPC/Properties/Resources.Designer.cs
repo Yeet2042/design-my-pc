@@ -163,6 +163,16 @@ namespace DesignMyPC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap magnify_icon_20px {
+            get {
+                object obj = ResourceManager.GetObject("magnify_icon_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimize_icon_24px {
             get {
                 object obj = ResourceManager.GetObject("minimize_icon_24px", resourceCulture);
