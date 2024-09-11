@@ -13,8 +13,17 @@ namespace DesignMyPC
         public static Panel MainContainerPanel;
         public static Form LoginPage;
         public static Form RegisterPage;
+        public static Form Dashboard;
 
         public static DataTable UserDT = new DataTable();
+
+        public static string LogInID;
+        public static string LogInUser;
+        public static string LogInName;
+        public static string LogInEmail;
+        public static string LogInRole;
+
+        public static string DashboardSelectedPage = "หน้าหลัก";
 
         public static void CloseApplication()
         {
@@ -38,6 +47,13 @@ namespace DesignMyPC
             MainContainerPanel.Controls.Clear();
             MainContainerPanel.Controls.Add(RegisterPage);
             RegisterPage.Show();
+        }
+
+        public static void OpenDashboard()
+        {
+            MainContainerPanel.Controls.Clear();
+            MainContainerPanel.Controls.Add(Dashboard);
+            Dashboard.Show();
         }
 
         private static string AutoID(string prefix, DataTable dt)
@@ -78,6 +94,13 @@ namespace DesignMyPC
                     if (row["password"].ToString() == password)
                     {
                         success = true;
+
+                        LogInID = row["id"].ToString();
+                        LogInUser = row["username"].ToString();
+                        LogInName = row["name"].ToString();
+                        LogInEmail = row["email"].ToString();
+                        LogInRole = row["role"].ToString();
+
                         break;
                     }
                     else

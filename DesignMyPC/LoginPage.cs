@@ -15,6 +15,8 @@ namespace DesignMyPC
         public LoginPage()
         {
             InitializeComponent();
+            PasswordTextBox.Text = "";
+            PasswordTextBox.PasswordChar = '*';
         }
 
         private void RegisterButtonInLogin_Click(object sender, EventArgs e)
@@ -44,6 +46,12 @@ namespace DesignMyPC
                 if (Global.Login(UsernameTextBox.Text, PasswordTextBox.Text))
                 {
                     MessageBox.Show("เข้าสู่ระบบสำเร็จ");
+
+                    Dashboard dashBoard = new Dashboard();
+                    dashBoard.TopLevel = false;
+                    Global.Dashboard = dashBoard;
+
+                    Global.OpenDashboard();
                 }
                 else
                 {

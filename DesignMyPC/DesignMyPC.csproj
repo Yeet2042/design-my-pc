@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
@@ -73,6 +79,9 @@
     <Compile Include="RegisterPage.Designer.cs">
       <DependentUpon>RegisterPage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LandingPage.resx">
       <DependentUpon>LandingPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +152,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calendar_icon_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_icon_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu_icon_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pc_icon_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_icon_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar_icon_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

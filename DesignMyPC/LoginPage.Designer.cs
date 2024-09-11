@@ -256,10 +256,9 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(767, 530);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(405, 50);
+            this.label8.Size = new System.Drawing.Size(394, 50);
             this.label8.TabIndex = 16;
-            this.label8.Text = "โปรแกรมจะตรวจสอบให้แน่ใจว่าชิ้นส่วนที่คุณเลือก\r\nสามารถทำงานร่วมกันได้อย่างราบรื่น" +
-    "";
+            this.label8.Text = "โปรแกรมจะตรวจสอบชิ้นส่วนที่คุณเลือกให้ใช้งาน\r\nร่วมกันได้มีประสิทธิภาพสูงสุด";
             // 
             // MinimizeButton
             // 
