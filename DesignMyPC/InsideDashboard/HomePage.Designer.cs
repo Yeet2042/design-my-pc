@@ -33,10 +33,8 @@
             this.PriceFilter = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.CardPanel0 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.CardPanel5 = new System.Windows.Forms.Panel();
             this.CardPanel1 = new System.Windows.Forms.Panel();
             this.CardPanel2 = new System.Windows.Forms.Panel();
@@ -46,9 +44,12 @@
             this.CardPanel8 = new System.Windows.Forms.Panel();
             this.CardPanel7 = new System.Windows.Forms.Panel();
             this.CardPanel6 = new System.Windows.Forms.Panel();
+            this.PreviousPageButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.NextPageButton = new System.Windows.Forms.Button();
+            this.PageNumber = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.CardPanel0.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -64,6 +65,9 @@
             // 
             // PerformanceFilter
             // 
+            this.PerformanceFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.PerformanceFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PerformanceFilter.ForeColor = System.Drawing.Color.White;
             this.PerformanceFilter.Location = new System.Drawing.Point(42, 5);
             this.PerformanceFilter.Name = "PerformanceFilter";
             this.PerformanceFilter.Size = new System.Drawing.Size(121, 21);
@@ -72,6 +76,9 @@
             // 
             // PriceFilter
             // 
+            this.PriceFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.PriceFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PriceFilter.ForeColor = System.Drawing.Color.White;
             this.PriceFilter.Location = new System.Drawing.Point(169, 5);
             this.PriceFilter.Name = "PriceFilter";
             this.PriceFilter.Size = new System.Drawing.Size(121, 21);
@@ -80,6 +87,9 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.Location = new System.Drawing.Point(589, 5);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -97,15 +107,6 @@
             this.panel1.Size = new System.Drawing.Size(200, 32);
             this.panel1.TabIndex = 14;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesignMyPC.Properties.Resources.magnify_icon_20px;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // UsernameTextBox
             // 
             this.UsernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
@@ -120,25 +121,11 @@
             // 
             // CardPanel0
             // 
-            this.CardPanel0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.CardPanel0.Controls.Add(this.button1);
+            this.CardPanel0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
             this.CardPanel0.Location = new System.Drawing.Point(0, 46);
             this.CardPanel0.Name = "CardPanel0";
             this.CardPanel0.Size = new System.Drawing.Size(160, 220);
             this.CardPanel0.TabIndex = 15;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 220);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "กดเพื่อออกแบบ";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // CardPanel5
             // 
@@ -203,12 +190,59 @@
             this.CardPanel6.Size = new System.Drawing.Size(160, 220);
             this.CardPanel6.TabIndex = 18;
             // 
+            // PreviousPageButton
+            // 
+            this.PreviousPageButton.FlatAppearance.BorderSize = 0;
+            this.PreviousPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PreviousPageButton.Image = global::DesignMyPC.Properties.Resources.left_icon_24px;
+            this.PreviousPageButton.Location = new System.Drawing.Point(394, 528);
+            this.PreviousPageButton.Name = "PreviousPageButton";
+            this.PreviousPageButton.Size = new System.Drawing.Size(30, 30);
+            this.PreviousPageButton.TabIndex = 22;
+            this.PreviousPageButton.UseVisualStyleBackColor = true;
+            this.PreviousPageButton.Click += new System.EventHandler(this.PreviousPageButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DesignMyPC.Properties.Resources.magnify_icon_20px;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // NextPageButton
+            // 
+            this.NextPageButton.FlatAppearance.BorderSize = 0;
+            this.NextPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextPageButton.Image = global::DesignMyPC.Properties.Resources.right_icon_24px;
+            this.NextPageButton.Location = new System.Drawing.Point(496, 528);
+            this.NextPageButton.Name = "NextPageButton";
+            this.NextPageButton.Size = new System.Drawing.Size(30, 30);
+            this.NextPageButton.TabIndex = 23;
+            this.NextPageButton.UseVisualStyleBackColor = true;
+            this.NextPageButton.Click += new System.EventHandler(this.NextPageButton_Click);
+            // 
+            // PageNumber
+            // 
+            this.PageNumber.AutoSize = true;
+            this.PageNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PageNumber.ForeColor = System.Drawing.Color.White;
+            this.PageNumber.Location = new System.Drawing.Point(430, 535);
+            this.PageNumber.Name = "PageNumber";
+            this.PageNumber.Size = new System.Drawing.Size(15, 16);
+            this.PageNumber.TabIndex = 24;
+            this.PageNumber.Text = "1";
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(928, 560);
+            this.Controls.Add(this.PageNumber);
+            this.Controls.Add(this.NextPageButton);
+            this.Controls.Add(this.PreviousPageButton);
             this.Controls.Add(this.CardPanel9);
             this.Controls.Add(this.CardPanel4);
             this.Controls.Add(this.CardPanel8);
@@ -231,7 +265,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.CardPanel0.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,6 +289,8 @@
         private System.Windows.Forms.Panel CardPanel8;
         private System.Windows.Forms.Panel CardPanel7;
         private System.Windows.Forms.Panel CardPanel6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button PreviousPageButton;
+        private System.Windows.Forms.Button NextPageButton;
+        private System.Windows.Forms.Label PageNumber;
     }
 }

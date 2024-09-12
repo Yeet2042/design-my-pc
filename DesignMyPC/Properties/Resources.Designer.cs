@@ -123,6 +123,16 @@ namespace DesignMyPC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap highend_pc_90px {
+            get {
+                object obj = ResourceManager.GetObject("highend_pc_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_icon_24px {
             get {
                 object obj = ResourceManager.GetObject("home_icon_24px", resourceCulture);
@@ -136,6 +146,16 @@ namespace DesignMyPC.Properties {
         internal static System.Drawing.Bitmap jigsaw_147px {
             get {
                 object obj = ResourceManager.GetObject("jigsaw_147px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap left_icon_24px {
+            get {
+                object obj = ResourceManager.GetObject("left_icon_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +183,29 @@ namespace DesignMyPC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lowend_pc_90px {
+            get {
+                object obj = ResourceManager.GetObject("lowend_pc_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap magnify_icon_20px {
             get {
                 object obj = ResourceManager.GetObject("magnify_icon_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mid_pc_90px {
+            get {
+                object obj = ResourceManager.GetObject("mid_pc_90px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +246,16 @@ namespace DesignMyPC.Properties {
         internal static System.Drawing.Bitmap pocket_147px {
             get {
                 object obj = ResourceManager.GetObject("pocket_147px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_icon_24px {
+            get {
+                object obj = ResourceManager.GetObject("right_icon_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

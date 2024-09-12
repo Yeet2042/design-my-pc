@@ -53,6 +53,12 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
+    <Compile Include="InsideDashboard\DesignCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDashboard\DesignCard.Designer.cs">
+      <DependentUpon>DesignCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsideDashboard\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsideDashboard\DesignCard.resx">
+      <DependentUpon>DesignCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsideDashboard\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
@@ -188,6 +197,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\magnify_icon_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mid_pc_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lowend_pc_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highend_pc_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_icon_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_icon_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -130,11 +130,20 @@
   <data name="pc_components" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pc_components.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="magnify_icon_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magnify_icon_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pocket_147px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pocket_147px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="email_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mid_pc_90px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mid_pc_90px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lowend_pc_90px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lowend_pc_90px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="share_147px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\share_147px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,6 +166,9 @@
   <data name="pc_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pc_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="highend_pc_90px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\highend_pc_90px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,7 +181,10 @@
   <data name="users_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\users_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="magnify_icon_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\magnify_icon_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="right_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\right_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="left_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\left_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
