@@ -99,6 +99,7 @@
             this.Controls.Add(this.CPULabel);
             this.Controls.Add(this.PcImage);
             this.Controls.Add(this.PcName);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomePageCard";
             this.Text = "HomePageCard";
