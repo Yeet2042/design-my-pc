@@ -18,6 +18,17 @@ namespace DesignMyPC
         public static DataTable UserDT = new DataTable();
         public static DataTable PcDT = new DataTable();
 
+        public static DataTable CPU_DT = new DataTable();
+        public static DataTable MB_DT = new DataTable();
+        public static DataTable RAM_DT = new DataTable();
+        public static DataTable GPU_DT = new DataTable();
+        public static DataTable SSD_DT = new DataTable();
+        public static DataTable HDD_DT = new DataTable();
+        public static DataTable PSU_DT = new DataTable();
+        public static DataTable COOLER_DT = new DataTable();
+        public static DataTable CASE_DT = new DataTable();
+
+
         public static string LogInID;
         public static string LogInUser;
         public static string LogInName;

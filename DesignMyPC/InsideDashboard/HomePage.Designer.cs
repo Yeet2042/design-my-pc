@@ -31,10 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.PerformanceFilter = new System.Windows.Forms.ComboBox();
             this.PriceFilter = new System.Windows.Forms.ComboBox();
-            this.Sortby = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.SearchBox = new System.Windows.Forms.TextBox();
             this.CardPanel0 = new System.Windows.Forms.Panel();
             this.CardPanel5 = new System.Windows.Forms.Panel();
             this.CardPanel1 = new System.Windows.Forms.Panel();
@@ -48,6 +45,9 @@
             this.PageNumber = new System.Windows.Forms.Label();
             this.NextPageButton = new System.Windows.Forms.Button();
             this.PreviousPageButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Sortby = new System.Windows.Forms.ComboBox();
+            this.SearchBox = new System.Windows.Forms.TextBox();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,7 +71,7 @@
             this.PerformanceFilter.ForeColor = System.Drawing.Color.White;
             this.PerformanceFilter.Location = new System.Drawing.Point(42, 5);
             this.PerformanceFilter.Name = "PerformanceFilter";
-            this.PerformanceFilter.Size = new System.Drawing.Size(121, 21);
+            this.PerformanceFilter.Size = new System.Drawing.Size(100, 21);
             this.PerformanceFilter.TabIndex = 0;
             this.PerformanceFilter.Text = "Performance";
             this.PerformanceFilter.SelectedIndexChanged += new System.EventHandler(this.PerformanceFilter_SelectedIndexChanged);
@@ -81,24 +81,12 @@
             this.PriceFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
             this.PriceFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PriceFilter.ForeColor = System.Drawing.Color.White;
-            this.PriceFilter.Location = new System.Drawing.Point(169, 5);
+            this.PriceFilter.Location = new System.Drawing.Point(148, 5);
             this.PriceFilter.Name = "PriceFilter";
-            this.PriceFilter.Size = new System.Drawing.Size(121, 21);
+            this.PriceFilter.Size = new System.Drawing.Size(100, 21);
             this.PriceFilter.TabIndex = 1;
             this.PriceFilter.Text = "Price";
             this.PriceFilter.SelectedIndexChanged += new System.EventHandler(this.PriceFilter_SelectedIndexChanged);
-            // 
-            // Sortby
-            // 
-            this.Sortby.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.Sortby.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Sortby.ForeColor = System.Drawing.Color.White;
-            this.Sortby.Location = new System.Drawing.Point(521, 5);
-            this.Sortby.Name = "Sortby";
-            this.Sortby.Size = new System.Drawing.Size(121, 21);
-            this.Sortby.TabIndex = 2;
-            this.Sortby.Text = "Sort by";
-            this.Sortby.SelectedIndexChanged += new System.EventHandler(this.Sortby_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -110,28 +98,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 32);
             this.panel1.TabIndex = 14;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesignMyPC.Properties.Resources.magnify_icon_20px;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // SearchBox
-            // 
-            this.SearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBox.ForeColor = System.Drawing.Color.White;
-            this.SearchBox.Location = new System.Drawing.Point(37, 6);
-            this.SearchBox.Margin = new System.Windows.Forms.Padding(10);
-            this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(153, 19);
-            this.SearchBox.TabIndex = 3;
-            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
             // CardPanel0
             // 
@@ -239,6 +205,40 @@
             this.PreviousPageButton.UseVisualStyleBackColor = true;
             this.PreviousPageButton.Click += new System.EventHandler(this.PreviousPageButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DesignMyPC.Properties.Resources.magnify_icon_20px;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Sortby
+            // 
+            this.Sortby.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.Sortby.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sortby.ForeColor = System.Drawing.Color.White;
+            this.Sortby.Location = new System.Drawing.Point(521, 5);
+            this.Sortby.Name = "Sortby";
+            this.Sortby.Size = new System.Drawing.Size(121, 21);
+            this.Sortby.TabIndex = 2;
+            this.Sortby.Text = "Sort by";
+            this.Sortby.SelectedIndexChanged += new System.EventHandler(this.Sortby_SelectedIndexChanged);
+            // 
+            // SearchBox
+            // 
+            this.SearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBox.ForeColor = System.Drawing.Color.White;
+            this.SearchBox.Location = new System.Drawing.Point(37, 6);
+            this.SearchBox.Margin = new System.Windows.Forms.Padding(10);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(153, 19);
+            this.SearchBox.TabIndex = 3;
+            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
+            // 
             // SubmitButton
             // 
             this.SubmitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(182)))), ((int)(((byte)(194)))));
@@ -297,10 +297,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox PerformanceFilter;
         private System.Windows.Forms.ComboBox PriceFilter;
-        private System.Windows.Forms.ComboBox Sortby;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Panel CardPanel0;
         private System.Windows.Forms.Panel CardPanel5;
         private System.Windows.Forms.Panel CardPanel1;
@@ -314,6 +312,8 @@
         private System.Windows.Forms.Button PreviousPageButton;
         private System.Windows.Forms.Button NextPageButton;
         private System.Windows.Forms.Label PageNumber;
+        private System.Windows.Forms.TextBox SearchBox;
+        private System.Windows.Forms.ComboBox Sortby;
         private System.Windows.Forms.Button SubmitButton;
     }
 }

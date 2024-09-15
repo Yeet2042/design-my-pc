@@ -14,6 +14,7 @@ namespace DesignMyPC
     public partial class Dashboard : Form
     {
         private Form Home;
+        private Form Components;
         public Dashboard()
         {
             InitializeComponent();
@@ -22,10 +23,13 @@ namespace DesignMyPC
             DashboardLabel.Text = Global.DashboardSelectedPage.Trim();
 
             InsideDashboard.HomePage homePage = new InsideDashboard.HomePage();
+            InsideDashboard.ComponentsPage componentsPage = new InsideDashboard.ComponentsPage();
 
             homePage.TopLevel = false;
+            componentsPage.TopLevel = false;
 
             Home = homePage;
+            Components = componentsPage;
 
             OpenHomePage();
 
@@ -50,6 +54,13 @@ namespace DesignMyPC
             DashboardContainer.Controls.Clear();
             DashboardContainer.Controls.Add(Home);
             Home.Show();
+        }
+
+        private void OpenComponentsPage()
+        {
+            DashboardContainer.Controls.Clear();
+            DashboardContainer.Controls.Add(Components);
+            Components.Show();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
@@ -80,6 +91,8 @@ namespace DesignMyPC
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
+            OpenHomePage();
+
             Global.DashboardSelectedPage = HomeButton.Text;
             DashboardLabel.Text = Global.DashboardSelectedPage.Trim();
 
@@ -91,6 +104,8 @@ namespace DesignMyPC
 
         private void ComponentsButton_Click(object sender, EventArgs e)
         {
+            OpenComponentsPage();
+
             Global.DashboardSelectedPage = ComponentsButton.Text;
             DashboardLabel.Text = Global.DashboardSelectedPage.Trim();
 

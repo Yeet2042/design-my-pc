@@ -53,6 +53,18 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
+    <Compile Include="InsideDashboard\AddComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDashboard\AddComponent.Designer.cs">
+      <DependentUpon>AddComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsideDashboard\ComponentsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDashboard\ComponentsPage.Designer.cs">
+      <DependentUpon>ComponentsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsideDashboard\DesignCard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,12 @@
     </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsideDashboard\AddComponent.resx">
+      <DependentUpon>AddComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsideDashboard\ComponentsPage.resx">
+      <DependentUpon>ComponentsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsideDashboard\DesignCard.resx">
       <DependentUpon>DesignCard.cs</DependentUpon>
