@@ -41,7 +41,7 @@
             this.PcName.AutoSize = true;
             this.PcName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PcName.ForeColor = System.Drawing.Color.White;
-            this.PcName.Location = new System.Drawing.Point(42, 9);
+            this.PcName.Location = new System.Drawing.Point(43, 9);
             this.PcName.Name = "PcName";
             this.PcName.Size = new System.Drawing.Size(75, 20);
             this.PcName.TabIndex = 0;
@@ -52,7 +52,7 @@
             this.CPULabel.AutoSize = true;
             this.CPULabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPULabel.ForeColor = System.Drawing.Color.White;
-            this.CPULabel.Location = new System.Drawing.Point(42, 140);
+            this.CPULabel.Location = new System.Drawing.Point(43, 140);
             this.CPULabel.Name = "CPULabel";
             this.CPULabel.Size = new System.Drawing.Size(50, 16);
             this.CPULabel.TabIndex = 2;
@@ -63,7 +63,7 @@
             this.EfficientLabel.AutoSize = true;
             this.EfficientLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EfficientLabel.ForeColor = System.Drawing.Color.White;
-            this.EfficientLabel.Location = new System.Drawing.Point(42, 166);
+            this.EfficientLabel.Location = new System.Drawing.Point(43, 166);
             this.EfficientLabel.Name = "EfficientLabel";
             this.EfficientLabel.Size = new System.Drawing.Size(50, 16);
             this.EfficientLabel.TabIndex = 3;
@@ -74,7 +74,7 @@
             this.PriceLabel.AutoSize = true;
             this.PriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PriceLabel.ForeColor = System.Drawing.Color.White;
-            this.PriceLabel.Location = new System.Drawing.Point(43, 192);
+            this.PriceLabel.Location = new System.Drawing.Point(44, 192);
             this.PriceLabel.Name = "PriceLabel";
             this.PriceLabel.Size = new System.Drawing.Size(50, 16);
             this.PriceLabel.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             // PcImage
             // 
-            this.PcImage.Location = new System.Drawing.Point(35, 39);
+            this.PcImage.Location = new System.Drawing.Point(36, 39);
             this.PcImage.Name = "PcImage";
             this.PcImage.Size = new System.Drawing.Size(90, 90);
             this.PcImage.TabIndex = 1;

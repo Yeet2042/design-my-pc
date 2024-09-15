@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BrandFilter = new System.Windows.Forms.ComboBox();
+            this.DynamicComboBox1 = new System.Windows.Forms.ComboBox();
             this.TypeFilter = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.SeriesFilter = new System.Windows.Forms.ComboBox();
+            this.DynamicComboBox2 = new System.Windows.Forms.ComboBox();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.Sortby = new System.Windows.Forms.ComboBox();
-            this.ModelFilter = new System.Windows.Forms.ComboBox();
+            this.DynamicComboBox3 = new System.Windows.Forms.ComboBox();
             this.CardPanel9 = new System.Windows.Forms.Panel();
             this.CardPanel4 = new System.Windows.Forms.Panel();
             this.CardPanel8 = new System.Windows.Forms.Panel();
@@ -55,16 +55,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // BrandFilter
+            // DynamicComboBox1
             // 
-            this.BrandFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.BrandFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BrandFilter.ForeColor = System.Drawing.Color.White;
-            this.BrandFilter.Location = new System.Drawing.Point(148, 5);
-            this.BrandFilter.Name = "BrandFilter";
-            this.BrandFilter.Size = new System.Drawing.Size(100, 21);
-            this.BrandFilter.TabIndex = 4;
-            this.BrandFilter.Text = "Brand";
+            this.DynamicComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.DynamicComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DynamicComboBox1.ForeColor = System.Drawing.Color.White;
+            this.DynamicComboBox1.Location = new System.Drawing.Point(148, 5);
+            this.DynamicComboBox1.Name = "DynamicComboBox1";
+            this.DynamicComboBox1.Size = new System.Drawing.Size(100, 21);
+            this.DynamicComboBox1.TabIndex = 4;
+            this.DynamicComboBox1.Text = "Brand";
             // 
             // TypeFilter
             // 
@@ -76,6 +76,7 @@
             this.TypeFilter.Size = new System.Drawing.Size(100, 21);
             this.TypeFilter.TabIndex = 2;
             this.TypeFilter.Text = "Type";
+            this.TypeFilter.SelectedIndexChanged += new System.EventHandler(this.TypeFilter_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -88,16 +89,16 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "FIlter";
             // 
-            // SeriesFilter
+            // DynamicComboBox2
             // 
-            this.SeriesFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.SeriesFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SeriesFilter.ForeColor = System.Drawing.Color.White;
-            this.SeriesFilter.Location = new System.Drawing.Point(254, 5);
-            this.SeriesFilter.Name = "SeriesFilter";
-            this.SeriesFilter.Size = new System.Drawing.Size(100, 21);
-            this.SeriesFilter.TabIndex = 5;
-            this.SeriesFilter.Text = "Series";
+            this.DynamicComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.DynamicComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DynamicComboBox2.ForeColor = System.Drawing.Color.White;
+            this.DynamicComboBox2.Location = new System.Drawing.Point(254, 5);
+            this.DynamicComboBox2.Name = "DynamicComboBox2";
+            this.DynamicComboBox2.Size = new System.Drawing.Size(100, 21);
+            this.DynamicComboBox2.TabIndex = 5;
+            this.DynamicComboBox2.Text = "Series";
             // 
             // SubmitButton
             // 
@@ -157,16 +158,16 @@
             this.Sortby.TabIndex = 26;
             this.Sortby.Text = "Sort by";
             // 
-            // ModelFilter
+            // DynamicComboBox3
             // 
-            this.ModelFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.ModelFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ModelFilter.ForeColor = System.Drawing.Color.White;
-            this.ModelFilter.Location = new System.Drawing.Point(360, 5);
-            this.ModelFilter.Name = "ModelFilter";
-            this.ModelFilter.Size = new System.Drawing.Size(100, 21);
-            this.ModelFilter.TabIndex = 6;
-            this.ModelFilter.Text = "Model";
+            this.DynamicComboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.DynamicComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DynamicComboBox3.ForeColor = System.Drawing.Color.White;
+            this.DynamicComboBox3.Location = new System.Drawing.Point(360, 5);
+            this.DynamicComboBox3.Name = "DynamicComboBox3";
+            this.DynamicComboBox3.Size = new System.Drawing.Size(100, 21);
+            this.DynamicComboBox3.TabIndex = 6;
+            this.DynamicComboBox3.Text = "Model";
             // 
             // CardPanel9
             // 
@@ -294,14 +295,15 @@
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Sortby);
-            this.Controls.Add(this.ModelFilter);
-            this.Controls.Add(this.SeriesFilter);
-            this.Controls.Add(this.BrandFilter);
+            this.Controls.Add(this.DynamicComboBox3);
+            this.Controls.Add(this.DynamicComboBox2);
+            this.Controls.Add(this.DynamicComboBox1);
             this.Controls.Add(this.TypeFilter);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ComponentsPage";
             this.Text = "ComponentsPage";
+            this.Load += new System.EventHandler(this.ComponentsPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -312,16 +314,16 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox BrandFilter;
+        private System.Windows.Forms.ComboBox DynamicComboBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox SeriesFilter;
+        private System.Windows.Forms.ComboBox DynamicComboBox2;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.ComboBox Sortby;
         private System.Windows.Forms.ComboBox TypeFilter;
-        private System.Windows.Forms.ComboBox ModelFilter;
+        private System.Windows.Forms.ComboBox DynamicComboBox3;
         private System.Windows.Forms.Panel CardPanel9;
         private System.Windows.Forms.Panel CardPanel4;
         private System.Windows.Forms.Panel CardPanel8;

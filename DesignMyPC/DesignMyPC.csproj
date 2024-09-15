@@ -59,6 +59,12 @@
     <Compile Include="InsideDashboard\AddComponent.Designer.cs">
       <DependentUpon>AddComponent.cs</DependentUpon>
     </Compile>
+    <Compile Include="InsideDashboard\ComponentCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDashboard\ComponentCard.Designer.cs">
+      <DependentUpon>ComponentCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsideDashboard\ComponentsPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InsideDashboard\AddComponent.resx">
       <DependentUpon>AddComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsideDashboard\ComponentCard.resx">
+      <DependentUpon>ComponentCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsideDashboard\ComponentsPage.resx">
       <DependentUpon>ComponentsPage.cs</DependentUpon>

@@ -86,7 +86,7 @@ namespace DesignMyPC
             string password,
             string role)
         {
-            UserDT.Rows.Add(AutoID("", UserDT),
+            UserDT.Rows.Add(AutoID("USER", UserDT),
                 username,
                 name,
                 surname,

@@ -17,8 +17,8 @@ namespace DesignMyPC.InsideDashboard
 
         Form DesignButton;
 
+        DataTable UserPcDT;
         DataTable FilteredPcDT;
-        DataTable SearchPcDT;
 
         string SelectedPerformance = "";
         string SelectedPrice = "";
@@ -28,7 +28,12 @@ namespace DesignMyPC.InsideDashboard
         {
             InitializeComponent();
 
-            FilteredPcDT = Global.PcDT;
+            DataView view = new DataView(Global.PcDT);
+            view.RowFilter = $"author_id = '{Global.LogInID}'";
+
+            UserPcDT = view.ToTable();
+
+            FilteredPcDT = UserPcDT;
 
             PreviousPageButton.Left = ((this.Width - PreviousPageButton.Width) / 2) - 32;
             NextPageButton.Left = ((this.Width - NextPageButton.Width) / 2) + 32;
@@ -190,7 +195,7 @@ namespace DesignMyPC.InsideDashboard
 
         private void FilterItem() 
         {
-            DataView view = new DataView(Global.PcDT);
+            DataView view = new DataView(UserPcDT);
 
             string performanceFilter = "";
             string priceFilter = "";
@@ -284,7 +289,7 @@ namespace DesignMyPC.InsideDashboard
                 }
                 else
                 {
-                    FilteredPcDT = Global.PcDT;
+                    FilteredPcDT = UserPcDT;
                 }
             }
 
