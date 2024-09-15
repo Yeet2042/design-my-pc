@@ -18,6 +18,7 @@ namespace DesignMyPC.InsideDashboard
         Form DesignButton;
 
         DataTable FilteredPcDT;
+        DataTable SearchPcDT;
 
         string SelectedPerformance = "";
         string SelectedPrice = "";
@@ -74,6 +75,15 @@ namespace DesignMyPC.InsideDashboard
             string prefix = "CardPanel";
             string n = Convert.ToString(index);
             return prefix + n;
+        }
+
+        private void UpdatePage()
+        {
+            CurrentPage = 0;
+            PageNumber.Text = (CurrentPage + 1).ToString();
+
+            TotalPage();
+            LoadCard();
         }
 
         private void ClearCard()
@@ -244,42 +254,70 @@ namespace DesignMyPC.InsideDashboard
 
             view.RowFilter = performanceFilter;
             FilteredPcDT = view.ToTable();
-
-            CurrentPage = 0;
-            PageNumber.Text = (CurrentPage + 1).ToString();
-
-            TotalPage();
-            LoadCard();
         }
 
         private void PerformanceFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             FilterItem();
+            UpdatePage();
         }
 
         private void PriceFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             FilterItem();
+            UpdatePage();
+        }
+
+        private void SortbyItem()
+        {
+            DataView view = new DataView(FilteredPcDT);
+
+            if (Sortby.SelectedItem != null)
+            {
+                if (Sortby.SelectedItem.ToString() == "Low -> High")
+                {
+                    view.Sort = "price ASC";
+                }
+                else if (Sortby.SelectedItem.ToString() == "High -> Low")
+                {
+                    view.Sort = "price DESC";
+                }
+                else
+                {
+                    FilteredPcDT = Global.PcDT;
+                }
+            }
+
+            FilteredPcDT = view.ToTable();
         }
 
         private void Sortby_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataView view = new DataView(FilteredPcDT);
+            SortbyItem();
+            UpdatePage();
+        }
 
-            if (Sortby.SelectedItem.ToString() == "Low -> High")
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            string t = SearchBox.Text;
+
+            if (t != "")
             {
-                view.Sort = "price ASC";
-            }
-            else if (Sortby.SelectedItem.ToString() == "High -> Low")
-            {
-                view.Sort = "price DESC";
+                DataView view = new DataView(FilteredPcDT);
+                view.RowFilter = $"name LIKE '%{t}%'";
+                FilteredPcDT = view.ToTable();
             }
             else
             {
-                FilteredPcDT = Global.PcDT;
+                FilterItem();
+                SortbyItem();
+                UpdatePage();
             }
-
-            FilteredPcDT = view.ToTable();
 
             CurrentPage = 0;
             PageNumber.Text = (CurrentPage + 1).ToString();

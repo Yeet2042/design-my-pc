@@ -34,7 +34,7 @@
             this.Sortby = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
+            this.SearchBox = new System.Windows.Forms.TextBox();
             this.CardPanel0 = new System.Windows.Forms.Panel();
             this.CardPanel5 = new System.Windows.Forms.Panel();
             this.CardPanel1 = new System.Windows.Forms.Panel();
@@ -48,6 +48,7 @@
             this.PageNumber = new System.Windows.Forms.Label();
             this.NextPageButton = new System.Windows.Forms.Button();
             this.PreviousPageButton = new System.Windows.Forms.Button();
+            this.SubmitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +93,7 @@
             this.Sortby.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
             this.Sortby.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sortby.ForeColor = System.Drawing.Color.White;
-            this.Sortby.Location = new System.Drawing.Point(589, 5);
+            this.Sortby.Location = new System.Drawing.Point(521, 5);
             this.Sortby.Name = "Sortby";
             this.Sortby.Size = new System.Drawing.Size(121, 21);
             this.Sortby.TabIndex = 2;
@@ -104,8 +105,8 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.UsernameTextBox);
-            this.panel1.Location = new System.Drawing.Point(716, 0);
+            this.panel1.Controls.Add(this.SearchBox);
+            this.panel1.Location = new System.Drawing.Point(648, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 32);
             this.panel1.TabIndex = 14;
@@ -119,17 +120,18 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // UsernameTextBox
+            // SearchBox
             // 
-            this.UsernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTextBox.ForeColor = System.Drawing.Color.White;
-            this.UsernameTextBox.Location = new System.Drawing.Point(37, 6);
-            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(10);
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(153, 19);
-            this.UsernameTextBox.TabIndex = 3;
+            this.SearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBox.ForeColor = System.Drawing.Color.White;
+            this.SearchBox.Location = new System.Drawing.Point(37, 6);
+            this.SearchBox.Margin = new System.Windows.Forms.Padding(10);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(153, 19);
+            this.SearchBox.TabIndex = 3;
+            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
             // CardPanel0
             // 
@@ -237,12 +239,29 @@
             this.PreviousPageButton.UseVisualStyleBackColor = true;
             this.PreviousPageButton.Click += new System.EventHandler(this.PreviousPageButton_Click);
             // 
+            // SubmitButton
+            // 
+            this.SubmitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(182)))), ((int)(((byte)(194)))));
+            this.SubmitButton.FlatAppearance.BorderSize = 0;
+            this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitButton.ForeColor = System.Drawing.Color.White;
+            this.SubmitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubmitButton.Location = new System.Drawing.Point(859, 0);
+            this.SubmitButton.Name = "SubmitButton";
+            this.SubmitButton.Size = new System.Drawing.Size(69, 32);
+            this.SubmitButton.TabIndex = 25;
+            this.SubmitButton.Text = "ค้นหา";
+            this.SubmitButton.UseVisualStyleBackColor = false;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(928, 560);
+            this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.PageNumber);
             this.Controls.Add(this.NextPageButton);
             this.Controls.Add(this.PreviousPageButton);
@@ -281,7 +300,7 @@
         private System.Windows.Forms.ComboBox Sortby;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox UsernameTextBox;
+        private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Panel CardPanel0;
         private System.Windows.Forms.Panel CardPanel5;
         private System.Windows.Forms.Panel CardPanel1;
@@ -295,5 +314,6 @@
         private System.Windows.Forms.Button PreviousPageButton;
         private System.Windows.Forms.Button NextPageButton;
         private System.Windows.Forms.Label PageNumber;
+        private System.Windows.Forms.Button SubmitButton;
     }
 }
