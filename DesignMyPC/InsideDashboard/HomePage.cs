@@ -90,56 +90,33 @@ namespace DesignMyPC.InsideDashboard
         {
             ClearCard();
 
+            int rowsPerPage = 10;
+            int startIndex = CurrentPage == 0 ? 0 : CurrentPage * rowsPerPage - 1;
+            int endIndex = Math.Min(startIndex + rowsPerPage, FilteredPcDT.Rows.Count);
+            int startOnCard = CurrentPage == 0 ? 1 : 0;
+
             if (CurrentPage == 0)
             {
-                int startOnCard = 1;
                 CardPanel0.Controls.Add(DesignButton);
                 DesignButton.Show();
-
-                for (int i = 0; i < 10; i++)
-                {
-                    string cardName = CardName(startOnCard);
-                    Panel panel = this.Controls.Find(cardName, true).FirstOrDefault() as Panel;
-                    startOnCard++;
-
-                    if (panel != null)
-                    {
-                        HomePageCard card = new HomePageCard(FilteredPcDT.Rows[i]["name"].ToString(),
-                        FilteredPcDT.Rows[i]["cpu"].ToString(),
-                        FilteredPcDT.Rows[i]["efficient"].ToString(),
-                        FilteredPcDT.Rows[i]["price"].ToString());
-                        card.TopLevel = false;
-
-                        panel.Controls.Add(card);
-                        card.Show();
-                    }
-                }
             }
-            else
+
+            for (int i = startIndex; i < endIndex; i++)
             {
-                int rowsPerPage = 10;
-                int startIndex = CurrentPage * rowsPerPage - 1;
-                int endIndex = Math.Min(startIndex + rowsPerPage, FilteredPcDT.Rows.Count);
+                string cardName = CardName(startOnCard);
+                Panel panel = this.Controls.Find(cardName, true).FirstOrDefault() as Panel;
+                startOnCard++;
 
-                int startOnCard = 0;
-
-                for (int i = startIndex; i < endIndex; i++)
+                if (panel != null)
                 {
-                    string cardName = CardName(startOnCard);
-                    Panel panel = this.Controls.Find(cardName, true).FirstOrDefault() as Panel;
-                    startOnCard++;
+                    HomePageCard card = new HomePageCard(FilteredPcDT.Rows[i]["name"].ToString(),
+                    FilteredPcDT.Rows[i]["cpu"].ToString(),
+                    FilteredPcDT.Rows[i]["efficient"].ToString(),
+                    FilteredPcDT.Rows[i]["price"].ToString());
+                    card.TopLevel = false;
 
-                    if (panel != null)
-                    {
-                        HomePageCard card = new HomePageCard(FilteredPcDT.Rows[i]["name"].ToString(),
-                        FilteredPcDT.Rows[i]["cpu"].ToString(),
-                        FilteredPcDT.Rows[i]["efficient"].ToString(),
-                        FilteredPcDT.Rows[i]["price"].ToString());
-                        card.TopLevel = false;
-
-                        panel.Controls.Add(card);
-                        card.Show();
-                    }
+                    panel.Controls.Add(card);
+                    card.Show();
                 }
             }
         }
@@ -204,11 +181,73 @@ namespace DesignMyPC.InsideDashboard
         private void FilterItem() 
         {
             DataView view = new DataView(Global.PcDT);
-            view.RowFilter = "efficient >= 0 AND efficient <= 33";
+
+            string performanceFilter = "";
+            string priceFilter = "";
+
+            if (PerformanceFilter.SelectedItem != null)
+            {
+                if (PerformanceFilter.SelectedItem.ToString() == "High")
+                {
+                    performanceFilter = "efficient >= 67 AND efficient <= 100";
+                }
+                else if (PerformanceFilter.SelectedItem.ToString() == "Medium")
+                {
+                    performanceFilter = "efficient >= 34 AND efficient <= 66";
+                }
+                else if (PerformanceFilter.SelectedItem.ToString() == "Low")
+                {
+                    performanceFilter = "efficient >= 0 AND efficient <= 33";
+                }
+                else
+                {
+                    performanceFilter = "";
+                }
+            }
+
+            if (PriceFilter.SelectedItem != null)
+            {
+                if (PriceFilter.SelectedItem.ToString() == "0 - 25,000")
+                {
+                    priceFilter = "price >= 0 AND price <= 25000";
+                }
+                else if (PriceFilter.SelectedItem.ToString() == "25,001 - 50,000")
+                {
+                    priceFilter = "price >= 25001 AND price <= 50000";
+                }
+                else if (PriceFilter.SelectedItem.ToString() == "50,001 - 75,000")
+                {
+                    priceFilter = "price >= 50001 AND price <= 75000";
+                }
+                else if (PriceFilter.SelectedItem.ToString() == "75,001 - 100,000")
+                {
+                    priceFilter = "price >= 75001 AND price <= 100000";
+                }
+                else if (PriceFilter.SelectedItem.ToString() == "> 100,001")
+                {
+                    priceFilter = "price >= 100001";
+                }
+                else
+                {
+                    priceFilter = "";
+                }
+            }
+
+            if (performanceFilter != "" && priceFilter != "")
+            {
+                performanceFilter += " AND " + priceFilter;
+            }
+            else if (priceFilter != "")
+            {
+                performanceFilter = priceFilter;
+            }
+
+            view.RowFilter = performanceFilter;
             FilteredPcDT = view.ToTable();
 
             CurrentPage = 0;
             PageNumber.Text = (CurrentPage + 1).ToString();
+
             TotalPage();
             LoadCard();
         }
@@ -216,6 +255,37 @@ namespace DesignMyPC.InsideDashboard
         private void PerformanceFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             FilterItem();
+        }
+
+        private void PriceFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FilterItem();
+        }
+
+        private void Sortby_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataView view = new DataView(FilteredPcDT);
+
+            if (Sortby.SelectedItem.ToString() == "Low -> High")
+            {
+                view.Sort = "price ASC";
+            }
+            else if (Sortby.SelectedItem.ToString() == "High -> Low")
+            {
+                view.Sort = "price DESC";
+            }
+            else
+            {
+                FilteredPcDT = Global.PcDT;
+            }
+
+            FilteredPcDT = view.ToTable();
+
+            CurrentPage = 0;
+            PageNumber.Text = (CurrentPage + 1).ToString();
+
+            TotalPage();
+            LoadCard();
         }
     }
 }

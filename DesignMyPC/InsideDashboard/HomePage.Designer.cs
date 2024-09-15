@@ -85,6 +85,7 @@
             this.PriceFilter.Size = new System.Drawing.Size(121, 21);
             this.PriceFilter.TabIndex = 1;
             this.PriceFilter.Text = "Price";
+            this.PriceFilter.SelectedIndexChanged += new System.EventHandler(this.PriceFilter_SelectedIndexChanged);
             // 
             // Sortby
             // 
@@ -96,6 +97,7 @@
             this.Sortby.Size = new System.Drawing.Size(121, 21);
             this.Sortby.TabIndex = 2;
             this.Sortby.Text = "Sort by";
+            this.Sortby.SelectedIndexChanged += new System.EventHandler(this.Sortby_SelectedIndexChanged);
             // 
             // panel1
             // 
