@@ -12,8 +12,10 @@ namespace DesignMyPC.InsideDashboard
 {
     public partial class ComponentsPage : Form
     {
-        int CurrentPage = 0;
+        int CurrentPage = 1;
         int TotalPages;
+
+        int CardPerPage = 10;
 
         Form AddComponent;
 
@@ -129,7 +131,7 @@ namespace DesignMyPC.InsideDashboard
             PageNumber.Left = ((this.Width - PageNumber.Width) / 2);
 
             PreviousPageButton.Visible = false;
-            PageNumber.Text = (CurrentPage + 1).ToString();
+            PageNumber.Text = CurrentPage.ToString();
 
             string[] typeFilterArray = { "", "CPU", "Mainboard", "RAM", "GPU", "SSD", "HDD", "PSU", "CPU Cooler", "CASE" };
 
@@ -146,21 +148,20 @@ namespace DesignMyPC.InsideDashboard
         }
         private void TotalPage()
         {
-            TotalRows = 0;
-            TotalRows += FilteredCPU_DT.Rows.Count;
-            TotalRows += FilteredMB_DT.Rows.Count;
-            TotalRows += FilteredRAM_DT.Rows.Count;
-            TotalRows += FilteredGPU_DT.Rows.Count;
-            TotalRows += FilteredSSD_DT.Rows.Count;
-            TotalRows += FilteredHDD_DT.Rows.Count;
-            TotalRows += FilteredPSU_DT.Rows.Count;
-            TotalRows += FilteredCOOLER_DT.Rows.Count;
-            TotalRows += FilteredCASE_DT.Rows.Count;
+            int totalRows = FilteredCPU_DT.Rows.Count
+                            + FilteredMB_DT.Rows.Count
+                            + FilteredRAM_DT.Rows.Count
+                            + FilteredGPU_DT.Rows.Count
+                            + FilteredSSD_DT.Rows.Count
+                            + FilteredHDD_DT.Rows.Count
+                            + FilteredPSU_DT.Rows.Count
+                            + FilteredCOOLER_DT.Rows.Count
+                            + FilteredCASE_DT.Rows.Count;
 
             double rowsPerPage = 10;
-            double pages = TotalRows / rowsPerPage;
+            double pages = totalRows / rowsPerPage;
 
-            TotalPages = Convert.ToInt32(Math.Ceiling(pages)) - 1;
+            TotalPages = Convert.ToInt32(Math.Ceiling(pages));
         }
         private string CardName(int index)
         {
@@ -170,15 +171,14 @@ namespace DesignMyPC.InsideDashboard
         }
         private void UpdatePage()
         {
-            CurrentPage = 0;
-            PageNumber.Text = (CurrentPage + 1).ToString();
+            PageNumber.Text = CurrentPage.ToString();
 
             TotalPage();
             LoadCard();
         }
         private void ClearCard()
         {
-            for (int i = 0; i <= 9; i++)
+            for (int i = 1; i < 11; i++)
             {
                 string cardName = CardName(i);
                 Panel panel = this.Controls.Find(cardName, true).FirstOrDefault() as Panel;
@@ -189,18 +189,27 @@ namespace DesignMyPC.InsideDashboard
         {
             ClearCard();
 
-            int rowsPerPage = 10;
-            int startIndex = CurrentPage == 0 && Global.LogInRole == "admin" ? 0 : CurrentPage * rowsPerPage - 1;
-            int endIndex = Math.Min(startIndex + rowsPerPage, TotalRows);
-            int startOnCard = CurrentPage == 0 && Global.LogInRole == "admin" ? 1 : 0;
+            int totalRows = FilteredCPU_DT.Rows.Count
+                            + FilteredMB_DT.Rows.Count
+                            + FilteredRAM_DT.Rows.Count
+                            + FilteredGPU_DT.Rows.Count
+                            + FilteredSSD_DT.Rows.Count
+                            + FilteredHDD_DT.Rows.Count
+                            + FilteredPSU_DT.Rows.Count
+                            + FilteredCOOLER_DT.Rows.Count
+                            + FilteredCASE_DT.Rows.Count;
 
-            if (CurrentPage == 0 && Global.LogInRole == "admin")
+            int startIndex = CurrentPage == 1 ? 0 : (CardPerPage - 1) + (CurrentPage - 2) * CardPerPage;
+            int endIndex = Math.Min(startIndex + CardPerPage, totalRows);
+            int startOnCard = CurrentPage == 1 && Global.LogInRole == "admin" ? 2 : 1;
+
+            if (CurrentPage == 1 && Global.LogInRole == "admin")
             {
-                CardPanel0.Controls.Add(AddComponent);
+                CardPanel1.Controls.Add(AddComponent);
                 AddComponent.Show();
             }
 
-            for (int i = startIndex; i < 1; i++)
+            for (int i = startIndex; i < endIndex; i++)
             {
                 string cardName = CardName(startOnCard);
                 Panel panel = this.Controls.Find(cardName, true).FirstOrDefault() as Panel;
@@ -208,22 +217,646 @@ namespace DesignMyPC.InsideDashboard
 
                 if (panel != null)
                 {
-                    ComponentCard card = new ComponentCard(
-                        FilteredCPU_DT.Rows[i]["type"].ToString(),
-                        FilteredCPU_DT.Rows[i]["brand"].ToString(),
-                        FilteredCPU_DT.Rows[i]["serie"].ToString(),
-                        FilteredCPU_DT.Rows[i]["model"].ToString(),
-                        FilteredCPU_DT.Rows[i]["core"].ToString(),
-                        FilteredCPU_DT.Rows[i]["thread"].ToString(),
-                        FilteredCPU_DT.Rows[i]["bClock"].ToString(),
-                        FilteredCPU_DT.Rows[i]["tClock"].ToString(),
-                        FilteredCPU_DT.Rows[i]["tdp"].ToString(),
-                        FilteredCPU_DT.Rows[i]["price"].ToString()
-                    );
-                    card.TopLevel = false;
+                    ComponentCard card;
 
-                    panel.Controls.Add(card);
-                    card.Show();
+                    if (i < FilteredCPU_DT.Rows.Count)
+                    {
+                        card = new ComponentCard(
+                            FilteredCPU_DT.Rows[i]["type"].ToString(),
+                            FilteredCPU_DT.Rows[i]["brand"].ToString(),
+                            FilteredCPU_DT.Rows[i]["serie"].ToString(),
+                            FilteredCPU_DT.Rows[i]["model"].ToString(),
+
+                            //cpu
+                            FilteredCPU_DT.Rows[i]["core"].ToString(),
+                            FilteredCPU_DT.Rows[i]["thread"].ToString(),
+                            FilteredCPU_DT.Rows[i]["bClock"].ToString(),
+                            FilteredCPU_DT.Rows[i]["tClock"].ToString(),
+                            FilteredCPU_DT.Rows[i]["tdp"].ToString(),
+
+                            //mb
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ram
+                            "",
+                            "",
+                            "",
+
+                            //gpu
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ssd
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //hdd
+                            "",
+                            "",
+                            "",
+
+                            //psu
+                            "",
+                            "",
+                            "",
+
+                            //cooler
+                            "",
+                            "",
+                            "",
+
+                            //case
+                            "",
+                            "",
+                            "",
+
+                            FilteredCPU_DT.Rows[i]["price"].ToString()
+                        );
+                        card.TopLevel = false;
+
+                        panel.Controls.Add(card);
+                        card.Show();
+                    }
+                    else if (i < FilteredCPU_DT.Rows.Count 
+                                    + FilteredMB_DT.Rows.Count)
+                    {
+                        int mbI = i - FilteredMB_DT.Rows.Count;
+                        card = new ComponentCard(
+                            FilteredMB_DT.Rows[mbI]["type"].ToString(),
+                            FilteredMB_DT.Rows[mbI]["brand"].ToString(),
+                            FilteredMB_DT.Rows[mbI]["serie"].ToString(),
+                            "",
+
+                            //cpu
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //mb
+                            FilteredMB_DT.Rows[mbI]["socket"].ToString(),
+                            FilteredMB_DT.Rows[mbI]["chipset"].ToString(),
+                            FilteredMB_DT.Rows[mbI]["ramType"].ToString(),
+                            FilteredMB_DT.Rows[mbI]["formFactor"].ToString(),
+
+                            //ram
+                            "",
+                            "",
+                            "",
+
+                            //gpu
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ssd
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //hdd
+                            "",
+                            "",
+                            "",
+
+                            //psu
+                            "",
+                            "",
+                            "",
+
+                            //cooler
+                            "",
+                            "",
+                            "",
+
+                            //case
+                            "",
+                            "",
+                            "",
+
+                            FilteredMB_DT.Rows[mbI]["price"].ToString()
+                        );
+                        card.TopLevel = false;
+
+                        panel.Controls.Add(card);
+                        card.Show();
+                    }
+                    else if (i < FilteredCPU_DT.Rows.Count
+                                    + FilteredMB_DT.Rows.Count
+                                    + FilteredRAM_DT.Rows.Count)
+                    {
+                        int ramI = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count);
+                        card = new ComponentCard(
+                            FilteredRAM_DT.Rows[ramI]["type"].ToString(),
+                            FilteredRAM_DT.Rows[ramI]["brand"].ToString(),
+                            FilteredRAM_DT.Rows[ramI]["serie"].ToString(),
+                            "",
+
+                            //cpu
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //mb
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ram
+                            FilteredRAM_DT.Rows[ramI]["ramType"].ToString(),
+                            FilteredRAM_DT.Rows[ramI]["size"].ToString(),
+                            FilteredRAM_DT.Rows[ramI]["speed"].ToString(),
+
+                            //gpu
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ssd
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //hdd
+                            "",
+                            "",
+                            "",
+
+                            //psu
+                            "",
+                            "",
+                            "",
+
+                            //cooler
+                            "",
+                            "",
+                            "",
+
+                            //case
+                            "",
+                            "",
+                            "",
+
+                            FilteredRAM_DT.Rows[ramI]["price"].ToString()
+                        );
+                        card.TopLevel = false;
+
+                        panel.Controls.Add(card);
+                        card.Show();
+                    }
+                    else if (i < FilteredCPU_DT.Rows.Count
+                                    + FilteredMB_DT.Rows.Count
+                                    + FilteredRAM_DT.Rows.Count
+                                    + FilteredGPU_DT.Rows.Count)
+                    {
+                        int I = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count + FilteredRAM_DT.Rows.Count);
+                        card = new ComponentCard(
+                            FilteredGPU_DT.Rows[I]["type"].ToString(),
+                            FilteredGPU_DT.Rows[I]["subBrand"].ToString(),
+                            FilteredGPU_DT.Rows[I]["serie"].ToString(),
+                            FilteredGPU_DT.Rows[I]["model"].ToString(),
+
+                            //cpu
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //mb
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ram
+                            "",
+                            "",
+                            "",
+
+                            //gpu
+                            FilteredGPU_DT.Rows[I]["bClock"].ToString(),
+                            FilteredGPU_DT.Rows[I]["tClock"].ToString(),
+                            FilteredGPU_DT.Rows[I]["ramType"].ToString(),
+                            FilteredGPU_DT.Rows[I]["ramSize"].ToString(),
+
+                            //ssd
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //hdd
+                            "",
+                            "",
+                            "",
+
+                            //psu
+                            "",
+                            "",
+                            "",
+
+                            //cooler
+                            "",
+                            "",
+                            "",
+
+                            //case
+                            "",
+                            "",
+                            "",
+
+                            FilteredGPU_DT.Rows[I]["price"].ToString()
+                        );
+                        card.TopLevel = false;
+
+                        panel.Controls.Add(card);
+                        card.Show();
+                    }
+                    else if (i < FilteredCPU_DT.Rows.Count
+                                    + FilteredMB_DT.Rows.Count
+                                    + FilteredRAM_DT.Rows.Count
+                                    + FilteredGPU_DT.Rows.Count
+                                    + FilteredSSD_DT.Rows.Count)
+                    {
+                        int I = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count + FilteredRAM_DT.Rows.Count + FilteredGPU_DT.Rows.Count);
+                        card = new ComponentCard(
+                            FilteredSSD_DT.Rows[I]["type"].ToString(),
+                            FilteredSSD_DT.Rows[I]["brand"].ToString(),
+                            FilteredSSD_DT.Rows[I]["serie"].ToString(),
+                            FilteredSSD_DT.Rows[I]["model"].ToString(),
+
+                            //cpu
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //mb
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ram
+                            "",
+                            "",
+                            "",
+
+                            //gpu
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ssd
+                            FilteredSSD_DT.Rows[I]["interface"].ToString(),
+                            FilteredSSD_DT.Rows[I]["protocal"].ToString(),
+                            FilteredSSD_DT.Rows[I]["size"].ToString(),
+                            FilteredSSD_DT.Rows[I]["read"].ToString(),
+                            FilteredSSD_DT.Rows[I]["write"].ToString(),
+
+                            //hdd
+                            "",
+                            "",
+                            "",
+
+                            //psu
+                            "",
+                            "",
+                            "",
+
+                            //cooler
+                            "",
+                            "",
+                            "",
+
+                            //case
+                            "",
+                            "",
+                            "",
+
+                            FilteredSSD_DT.Rows[I]["price"].ToString()
+                        );
+                        card.TopLevel = false;
+
+                        panel.Controls.Add(card);
+                        card.Show();
+                    }
+                    else if (i < FilteredCPU_DT.Rows.Count
+                                    + FilteredMB_DT.Rows.Count
+                                    + FilteredRAM_DT.Rows.Count
+                                    + FilteredGPU_DT.Rows.Count
+                                    + FilteredSSD_DT.Rows.Count
+                                    + FilteredHDD_DT.Rows.Count)
+                    {
+                        int I = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count + FilteredRAM_DT.Rows.Count + FilteredGPU_DT.Rows.Count + FilteredSSD_DT.Rows.Count);
+                        card = new ComponentCard(
+                            FilteredHDD_DT.Rows[I]["type"].ToString(),
+                            FilteredHDD_DT.Rows[I]["brand"].ToString(),
+                            FilteredHDD_DT.Rows[I]["serie"].ToString(),
+                            "",
+
+                            //cpu
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //mb
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ram
+                            "",
+                            "",
+                            "",
+
+                            //gpu
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ssd
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //hdd
+                            FilteredHDD_DT.Rows[I]["formFactor"].ToString(),
+                            FilteredHDD_DT.Rows[I]["size"].ToString(),
+                            FilteredHDD_DT.Rows[I]["speed"].ToString(),
+
+                            //psu
+                            "",
+                            "",
+                            "",
+
+                            //cooler
+                            "",
+                            "",
+                            "",
+
+                            //case
+                            "",
+                            "",
+                            "",
+
+                            FilteredHDD_DT.Rows[I]["price"].ToString()
+                        );
+                        card.TopLevel = false;
+
+                        panel.Controls.Add(card);
+                        card.Show();
+                    }
+                    else if (i < FilteredCPU_DT.Rows.Count
+                                    + FilteredMB_DT.Rows.Count
+                                    + FilteredRAM_DT.Rows.Count
+                                    + FilteredGPU_DT.Rows.Count
+                                    + FilteredSSD_DT.Rows.Count
+                                    + FilteredHDD_DT.Rows.Count
+                                    + FilteredPSU_DT.Rows.Count)
+                    {
+                        int I = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count + FilteredRAM_DT.Rows.Count + FilteredGPU_DT.Rows.Count + FilteredSSD_DT.Rows.Count + FilteredHDD_DT.Rows.Count);
+                        card = new ComponentCard(
+                            FilteredPSU_DT.Rows[I]["type"].ToString(),
+                            FilteredPSU_DT.Rows[I]["brand"].ToString(),
+                            FilteredPSU_DT.Rows[I]["serie"].ToString(),
+                            "",
+
+                            //cpu
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //mb
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ram
+                            "",
+                            "",
+                            "",
+
+                            //gpu
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ssd
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //hdd
+                            "",
+                            "",
+                            "",
+
+                            //psu
+                            FilteredPSU_DT.Rows[I]["formFactor"].ToString(),
+                            FilteredPSU_DT.Rows[I]["maxPower"].ToString(),
+                            FilteredPSU_DT.Rows[I]["cert"].ToString(),
+
+                            //cooler
+                            "",
+                            "",
+                            "",
+
+                            //case
+                            "",
+                            "",
+                            "",
+
+                            FilteredCPU_DT.Rows[I]["price"].ToString()
+                        );
+                        card.TopLevel = false;
+
+                        panel.Controls.Add(card);
+                        card.Show();
+                    }
+                    else if (i < FilteredCPU_DT.Rows.Count
+                                    + FilteredMB_DT.Rows.Count
+                                    + FilteredRAM_DT.Rows.Count
+                                    + FilteredGPU_DT.Rows.Count
+                                    + FilteredSSD_DT.Rows.Count
+                                    + FilteredHDD_DT.Rows.Count
+                                    + FilteredPSU_DT.Rows.Count
+                                    + FilteredCOOLER_DT.Rows.Count)
+                    {
+                        int I = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count + FilteredRAM_DT.Rows.Count + FilteredGPU_DT.Rows.Count + FilteredSSD_DT.Rows.Count + FilteredHDD_DT.Rows.Count + FilteredPSU_DT.Rows.Count);
+                        card = new ComponentCard(
+                            FilteredCOOLER_DT.Rows[I]["type"].ToString(),
+                            FilteredCOOLER_DT.Rows[I]["brand"].ToString(),
+                            FilteredCOOLER_DT.Rows[I]["serie"].ToString(),
+                            FilteredCOOLER_DT.Rows[I]["model"].ToString(),
+
+                            //cpu
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //mb
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ram
+                            "",
+                            "",
+                            "",
+
+                            //gpu
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ssd
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //hdd
+                            "",
+                            "",
+                            "",
+
+                            //psu
+                            "",
+                            "",
+                            "",
+
+                            //cooler
+                            FilteredCOOLER_DT.Rows[I]["coolerType"].ToString(),
+                            FilteredCOOLER_DT.Rows[I]["size"].ToString(),
+                            FilteredCOOLER_DT.Rows[I]["tdp"].ToString(),
+
+                            //case
+                            "",
+                            "",
+                            "",
+
+                            FilteredCOOLER_DT.Rows[I]["price"].ToString()
+                        );
+                        card.TopLevel = false;
+
+                        panel.Controls.Add(card);
+                        card.Show();
+                    }
+                    else if (i < FilteredCPU_DT.Rows.Count
+                                    + FilteredMB_DT.Rows.Count
+                                    + FilteredRAM_DT.Rows.Count
+                                    + FilteredGPU_DT.Rows.Count
+                                    + FilteredSSD_DT.Rows.Count
+                                    + FilteredHDD_DT.Rows.Count
+                                    + FilteredPSU_DT.Rows.Count
+                                    + FilteredCOOLER_DT.Rows.Count
+                                    + FilteredCASE_DT.Rows.Count)
+                    {
+                        int I = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count + FilteredRAM_DT.Rows.Count + FilteredGPU_DT.Rows.Count + FilteredSSD_DT.Rows.Count + FilteredHDD_DT.Rows.Count + FilteredPSU_DT.Rows.Count + FilteredCOOLER_DT.Rows.Count);
+                        card = new ComponentCard(
+                            FilteredCASE_DT.Rows[I]["type"].ToString(),
+                            FilteredCASE_DT.Rows[I]["brand"].ToString(),
+                            FilteredCASE_DT.Rows[I]["serie"].ToString(),
+                            FilteredCASE_DT.Rows[I]["model"].ToString(),
+
+                            //cpu
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //mb
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ram
+                            "",
+                            "",
+                            "",
+
+                            //gpu
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //ssd
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+
+                            //hdd
+                            "",
+                            "",
+                            "",
+
+                            //psu
+                            "",
+                            "",
+                            "",
+
+                            //cooler
+                            "",
+                            "",
+                            "",
+
+                            //case
+                            FilteredCASE_DT.Rows[I]["formFactor"].ToString(),
+                            FilteredCASE_DT.Rows[I]["MBFormFactor"].ToString(),
+                            FilteredCASE_DT.Rows[I]["color"].ToString(),
+
+                            FilteredCASE_DT.Rows[I]["price"].ToString()
+                        );
+                        card.TopLevel = false;
+
+                        panel.Controls.Add(card);
+                        card.Show();
+                    }
                 }
             }
         }
@@ -424,6 +1057,38 @@ namespace DesignMyPC.InsideDashboard
                     DynamicComboBox3.Items.Add(item);
                 }
             }
+        }
+        private void setButtonVisibility()
+        {
+            if (CurrentPage == 1)
+            {
+                PreviousPageButton.Visible = false;
+                NextPageButton.Visible = true;
+            }
+            else if (CurrentPage == TotalPages)
+            {
+                PreviousPageButton.Visible = true;
+                NextPageButton.Visible = false;
+            }
+            else
+            {
+                PreviousPageButton.Visible = true;
+                NextPageButton.Visible = true;
+            }
+        }
+        private void NextPageButton_Click(object sender, EventArgs e)
+        {
+            CurrentPage++;
+            PageNumber.Text = CurrentPage.ToString();
+            LoadCard();
+            setButtonVisibility();
+        }
+        private void PreviousPageButton_Click(object sender, EventArgs e)
+        {
+            CurrentPage--;
+            PageNumber.Text = CurrentPage.ToString();
+            LoadCard();
+            setButtonVisibility();
         }
     }
 }

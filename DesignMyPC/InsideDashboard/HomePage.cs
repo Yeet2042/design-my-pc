@@ -12,8 +12,10 @@ namespace DesignMyPC.InsideDashboard
 {
     public partial class HomePage : Form
     {
-        int CurrentPage = 0;
+        int CurrentPage = 1;
         int TotalPages;
+
+        int CardPerPage = 10;
 
         Form DesignButton;
 
@@ -40,7 +42,7 @@ namespace DesignMyPC.InsideDashboard
             PageNumber.Left = ((this.Width - PageNumber.Width) / 2);
 
             PreviousPageButton.Visible = false;
-            PageNumber.Text = (CurrentPage + 1).ToString();
+            PageNumber.Text = CurrentPage.ToString();
 
             PerformanceFilter.Items.Add("");
             PerformanceFilter.Items.Add("High");
@@ -72,7 +74,7 @@ namespace DesignMyPC.InsideDashboard
             double rowsPerPage = 10;
             double pages = rows / rowsPerPage;
 
-            TotalPages = Convert.ToInt32(Math.Ceiling(pages)) - 1;
+            TotalPages = Convert.ToInt32(Math.Ceiling(pages));
         }
 
         private string CardName(int index)
@@ -84,8 +86,7 @@ namespace DesignMyPC.InsideDashboard
 
         private void UpdatePage()
         {
-            CurrentPage = 0;
-            PageNumber.Text = (CurrentPage + 1).ToString();
+            PageNumber.Text = CurrentPage.ToString();
 
             TotalPage();
             LoadCard();
@@ -93,7 +94,7 @@ namespace DesignMyPC.InsideDashboard
 
         private void ClearCard()
         {
-            for (int i = 0; i <= 9; i++)
+            for (int i = 1; i < 11; i++)
             {
                 string cardName = CardName(i);
                 Panel panel = this.Controls.Find(cardName, true).FirstOrDefault() as Panel;
@@ -105,14 +106,13 @@ namespace DesignMyPC.InsideDashboard
         {
             ClearCard();
 
-            int rowsPerPage = 10;
-            int startIndex = CurrentPage == 0 ? 0 : CurrentPage * rowsPerPage - 1;
-            int endIndex = Math.Min(startIndex + rowsPerPage, FilteredPcDT.Rows.Count);
-            int startOnCard = CurrentPage == 0 ? 1 : 0;
+            int startIndex = CurrentPage == 1 ? 0 : (CardPerPage - 1) + (CurrentPage - 2) * CardPerPage;
+            int endIndex = Math.Min(startIndex + CardPerPage, FilteredPcDT.Rows.Count);
+            int startOnCard = CurrentPage == 1 ? 2 : 1;
 
-            if (CurrentPage == 0)
+            if (CurrentPage == 1)
             {
-                CardPanel0.Controls.Add(DesignButton);
+                CardPanel1.Controls.Add(DesignButton);
                 DesignButton.Show();
             }
 
@@ -124,12 +124,13 @@ namespace DesignMyPC.InsideDashboard
 
                 if (panel != null)
                 {
-                    HomePageCard card = new HomePageCard(FilteredPcDT.Rows[i]["name"].ToString(),
-                    FilteredPcDT.Rows[i]["cpu"].ToString(),
-                    FilteredPcDT.Rows[i]["efficient"].ToString(),
-                    FilteredPcDT.Rows[i]["price"].ToString());
-                    card.TopLevel = false;
+                    HomePageCard card = new HomePageCard(
+                        FilteredPcDT.Rows[i]["name"].ToString(),
+                        FilteredPcDT.Rows[i]["cpu"].ToString(),
+                        FilteredPcDT.Rows[i]["efficient"].ToString(),
+                        FilteredPcDT.Rows[i]["price"].ToString());
 
+                    card.TopLevel = false; // กำหนดให้เป็น child control
                     panel.Controls.Add(card);
                     card.Show();
                 }
@@ -141,56 +142,39 @@ namespace DesignMyPC.InsideDashboard
             LoadCard();
         }
 
+        private void setButtonVisibility()
+        {
+            if (CurrentPage == 1)
+            {
+                PreviousPageButton.Visible = false;
+                NextPageButton.Visible = true;
+            }
+            else if (CurrentPage == TotalPages)
+            {
+                PreviousPageButton.Visible = true;
+                NextPageButton.Visible = false;
+            }
+            else
+            {
+                PreviousPageButton.Visible = true;
+                NextPageButton.Visible = true;
+            }
+        }
+
         private void NextPageButton_Click(object sender, EventArgs e)
         {
             CurrentPage ++;
-            PageNumber.Text = (CurrentPage + 1).ToString();
+            PageNumber.Text = CurrentPage.ToString();
             LoadCard();
-
-            if (CurrentPage != 0)
-            {
-                PreviousPageButton.Visible = true;
-            } 
-            else
-            {
-                PreviousPageButton.Visible = false;
-                
-            }
-
-            if (CurrentPage != TotalPages)
-            {
-                NextPageButton.Visible = true;
-            }
-            else
-            {
-                NextPageButton.Visible = false;
-            }
+            setButtonVisibility();
         }
 
         private void PreviousPageButton_Click(object sender, EventArgs e)
         {
             CurrentPage --;
-            PageNumber.Text = (CurrentPage + 1).ToString();
+            PageNumber.Text = CurrentPage.ToString();
             LoadCard();
-
-            if (CurrentPage != 0)
-            {
-                PreviousPageButton.Visible = true;
-            }
-            else
-            {
-                PreviousPageButton.Visible = false;
-                NextPageButton.Visible = true;
-            }
-
-            if (CurrentPage != TotalPages)
-            {
-                NextPageButton.Visible = true;
-            }
-            else
-            {
-                NextPageButton.Visible = false;
-            }
+            setButtonVisibility();
         }
 
         private void FilterItem() 

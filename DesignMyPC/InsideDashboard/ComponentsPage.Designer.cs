@@ -38,16 +38,16 @@
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.Sortby = new System.Windows.Forms.ComboBox();
             this.DynamicComboBox3 = new System.Windows.Forms.ComboBox();
+            this.CardPanel10 = new System.Windows.Forms.Panel();
+            this.CardPanel5 = new System.Windows.Forms.Panel();
             this.CardPanel9 = new System.Windows.Forms.Panel();
-            this.CardPanel4 = new System.Windows.Forms.Panel();
             this.CardPanel8 = new System.Windows.Forms.Panel();
+            this.CardPanel4 = new System.Windows.Forms.Panel();
             this.CardPanel7 = new System.Windows.Forms.Panel();
             this.CardPanel3 = new System.Windows.Forms.Panel();
-            this.CardPanel6 = new System.Windows.Forms.Panel();
             this.CardPanel2 = new System.Windows.Forms.Panel();
+            this.CardPanel6 = new System.Windows.Forms.Panel();
             this.CardPanel1 = new System.Windows.Forms.Panel();
-            this.CardPanel5 = new System.Windows.Forms.Panel();
-            this.CardPanel0 = new System.Windows.Forms.Panel();
             this.PageNumber = new System.Windows.Forms.Label();
             this.NextPageButton = new System.Windows.Forms.Button();
             this.PreviousPageButton = new System.Windows.Forms.Button();
@@ -169,76 +169,76 @@
             this.DynamicComboBox3.TabIndex = 6;
             this.DynamicComboBox3.Text = "Model";
             // 
-            // CardPanel9
+            // CardPanel10
             // 
-            this.CardPanel9.Location = new System.Drawing.Point(768, 298);
-            this.CardPanel9.Name = "CardPanel9";
-            this.CardPanel9.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel9.TabIndex = 36;
-            // 
-            // CardPanel4
-            // 
-            this.CardPanel4.Location = new System.Drawing.Point(768, 46);
-            this.CardPanel4.Name = "CardPanel4";
-            this.CardPanel4.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel4.TabIndex = 32;
-            // 
-            // CardPanel8
-            // 
-            this.CardPanel8.Location = new System.Drawing.Point(576, 298);
-            this.CardPanel8.Name = "CardPanel8";
-            this.CardPanel8.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel8.TabIndex = 37;
-            // 
-            // CardPanel7
-            // 
-            this.CardPanel7.Location = new System.Drawing.Point(384, 298);
-            this.CardPanel7.Name = "CardPanel7";
-            this.CardPanel7.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel7.TabIndex = 38;
-            // 
-            // CardPanel3
-            // 
-            this.CardPanel3.Location = new System.Drawing.Point(576, 46);
-            this.CardPanel3.Name = "CardPanel3";
-            this.CardPanel3.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel3.TabIndex = 33;
-            // 
-            // CardPanel6
-            // 
-            this.CardPanel6.Location = new System.Drawing.Point(192, 298);
-            this.CardPanel6.Name = "CardPanel6";
-            this.CardPanel6.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel6.TabIndex = 35;
-            // 
-            // CardPanel2
-            // 
-            this.CardPanel2.Location = new System.Drawing.Point(384, 46);
-            this.CardPanel2.Name = "CardPanel2";
-            this.CardPanel2.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel2.TabIndex = 34;
-            // 
-            // CardPanel1
-            // 
-            this.CardPanel1.Location = new System.Drawing.Point(192, 46);
-            this.CardPanel1.Name = "CardPanel1";
-            this.CardPanel1.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel1.TabIndex = 30;
+            this.CardPanel10.Location = new System.Drawing.Point(768, 298);
+            this.CardPanel10.Name = "CardPanel10";
+            this.CardPanel10.Size = new System.Drawing.Size(160, 220);
+            this.CardPanel10.TabIndex = 36;
             // 
             // CardPanel5
             // 
-            this.CardPanel5.Location = new System.Drawing.Point(0, 298);
+            this.CardPanel5.Location = new System.Drawing.Point(768, 46);
             this.CardPanel5.Name = "CardPanel5";
             this.CardPanel5.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel5.TabIndex = 31;
+            this.CardPanel5.TabIndex = 32;
             // 
-            // CardPanel0
+            // CardPanel9
             // 
-            this.CardPanel0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
-            this.CardPanel0.Location = new System.Drawing.Point(0, 46);
-            this.CardPanel0.Name = "CardPanel0";
-            this.CardPanel0.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel0.TabIndex = 29;
+            this.CardPanel9.Location = new System.Drawing.Point(576, 298);
+            this.CardPanel9.Name = "CardPanel9";
+            this.CardPanel9.Size = new System.Drawing.Size(160, 220);
+            this.CardPanel9.TabIndex = 37;
+            // 
+            // CardPanel8
+            // 
+            this.CardPanel8.Location = new System.Drawing.Point(384, 298);
+            this.CardPanel8.Name = "CardPanel8";
+            this.CardPanel8.Size = new System.Drawing.Size(160, 220);
+            this.CardPanel8.TabIndex = 38;
+            // 
+            // CardPanel4
+            // 
+            this.CardPanel4.Location = new System.Drawing.Point(576, 46);
+            this.CardPanel4.Name = "CardPanel4";
+            this.CardPanel4.Size = new System.Drawing.Size(160, 220);
+            this.CardPanel4.TabIndex = 33;
+            // 
+            // CardPanel7
+            // 
+            this.CardPanel7.Location = new System.Drawing.Point(192, 298);
+            this.CardPanel7.Name = "CardPanel7";
+            this.CardPanel7.Size = new System.Drawing.Size(160, 220);
+            this.CardPanel7.TabIndex = 35;
+            // 
+            // CardPanel3
+            // 
+            this.CardPanel3.Location = new System.Drawing.Point(384, 46);
+            this.CardPanel3.Name = "CardPanel3";
+            this.CardPanel3.Size = new System.Drawing.Size(160, 220);
+            this.CardPanel3.TabIndex = 34;
+            // 
+            // CardPanel2
+            // 
+            this.CardPanel2.Location = new System.Drawing.Point(192, 46);
+            this.CardPanel2.Name = "CardPanel2";
+            this.CardPanel2.Size = new System.Drawing.Size(160, 220);
+            this.CardPanel2.TabIndex = 30;
+            // 
+            // CardPanel6
+            // 
+            this.CardPanel6.Location = new System.Drawing.Point(0, 298);
+            this.CardPanel6.Name = "CardPanel6";
+            this.CardPanel6.Size = new System.Drawing.Size(160, 220);
+            this.CardPanel6.TabIndex = 31;
+            // 
+            // CardPanel1
+            // 
+            this.CardPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
+            this.CardPanel1.Location = new System.Drawing.Point(0, 46);
+            this.CardPanel1.Name = "CardPanel1";
+            this.CardPanel1.Size = new System.Drawing.Size(160, 220);
+            this.CardPanel1.TabIndex = 29;
             // 
             // PageNumber
             // 
@@ -261,6 +261,7 @@
             this.NextPageButton.Size = new System.Drawing.Size(30, 30);
             this.NextPageButton.TabIndex = 40;
             this.NextPageButton.UseVisualStyleBackColor = true;
+            this.NextPageButton.Click += new System.EventHandler(this.NextPageButton_Click);
             // 
             // PreviousPageButton
             // 
@@ -272,6 +273,7 @@
             this.PreviousPageButton.Size = new System.Drawing.Size(30, 30);
             this.PreviousPageButton.TabIndex = 39;
             this.PreviousPageButton.UseVisualStyleBackColor = true;
+            this.PreviousPageButton.Click += new System.EventHandler(this.PreviousPageButton_Click);
             // 
             // ComponentsPage
             // 
@@ -282,16 +284,16 @@
             this.Controls.Add(this.PageNumber);
             this.Controls.Add(this.NextPageButton);
             this.Controls.Add(this.PreviousPageButton);
+            this.Controls.Add(this.CardPanel10);
+            this.Controls.Add(this.CardPanel5);
             this.Controls.Add(this.CardPanel9);
-            this.Controls.Add(this.CardPanel4);
             this.Controls.Add(this.CardPanel8);
+            this.Controls.Add(this.CardPanel4);
             this.Controls.Add(this.CardPanel7);
             this.Controls.Add(this.CardPanel3);
-            this.Controls.Add(this.CardPanel6);
             this.Controls.Add(this.CardPanel2);
+            this.Controls.Add(this.CardPanel6);
             this.Controls.Add(this.CardPanel1);
-            this.Controls.Add(this.CardPanel5);
-            this.Controls.Add(this.CardPanel0);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Sortby);
@@ -324,16 +326,16 @@
         private System.Windows.Forms.ComboBox Sortby;
         private System.Windows.Forms.ComboBox TypeFilter;
         private System.Windows.Forms.ComboBox DynamicComboBox3;
+        private System.Windows.Forms.Panel CardPanel10;
+        private System.Windows.Forms.Panel CardPanel5;
         private System.Windows.Forms.Panel CardPanel9;
-        private System.Windows.Forms.Panel CardPanel4;
         private System.Windows.Forms.Panel CardPanel8;
+        private System.Windows.Forms.Panel CardPanel4;
         private System.Windows.Forms.Panel CardPanel7;
         private System.Windows.Forms.Panel CardPanel3;
-        private System.Windows.Forms.Panel CardPanel6;
         private System.Windows.Forms.Panel CardPanel2;
+        private System.Windows.Forms.Panel CardPanel6;
         private System.Windows.Forms.Panel CardPanel1;
-        private System.Windows.Forms.Panel CardPanel5;
-        private System.Windows.Forms.Panel CardPanel0;
         private System.Windows.Forms.Label PageNumber;
         private System.Windows.Forms.Button NextPageButton;
         private System.Windows.Forms.Button PreviousPageButton;

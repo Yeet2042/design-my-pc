@@ -68,7 +68,7 @@ namespace DesignMyPC
             Global.MB_DT.Columns.Add("price", typeof(int));
             Global.MB_DT.Columns.Add("link", typeof(string));
 
-            Global.MB_DT.Rows.Add("MB001", "MB", "ASUS", "ROG STRIX E", "AM5", "X670E", 4, 192, "DDR5", 2, 4, 4, "ATX", 24, 100, 18880, "https://www.jib.co.th/web/product/readProduct/56450/2597/MAINBOARD--%E0%B9%80%E0%B8%A1%E0%B8%99%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%94--ASUS-ROG-STRIX-X670E-E-GAMING-WIFI--SOCKET-AM5---ATX-");
+            Global.MB_DT.Rows.Add("MB001", "MB", "ASUS", "ROG STRIX", "AM5", "X670E", 4, 192, "DDR5", 2, 4, 4, "ATX", 24, 100, 18880, "https://www.jib.co.th/web/product/readProduct/56450/2597/MAINBOARD--%E0%B9%80%E0%B8%A1%E0%B8%99%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%94--ASUS-ROG-STRIX-X670E-E-GAMING-WIFI--SOCKET-AM5---ATX-");
 
             Global.RAM_DT.Columns.Add("id", typeof(string));
             Global.RAM_DT.Columns.Add("type", typeof(string));
@@ -103,7 +103,7 @@ namespace DesignMyPC
             Global.GPU_DT.Columns.Add("price", typeof(int));
             Global.GPU_DT.Columns.Add("link", typeof(string));
 
-            Global.GPU_DT.Rows.Add("GPU001", "GPU", "NVIDIA", "ASUS", "ROG STRIX BTF", "RTX 4090", 2235, 2640, "GDDR6X", 24, "X16", 1000, 100, 93900, "https://www.advice.co.th/product/graphic-card-vga-/nvidia-4000-series/vga-asus-geforce-rtx-4090-rog-strix-o24g-gaming-btf-24gb-gddr6x");
+            Global.GPU_DT.Rows.Add("GPU001", "GPU", "NVIDIA", "ASUS", "ROG STRIX", "RTX 4090", 2235, 2640, "GDDR6X", 24, "X16", 1000, 100, 93900, "https://www.advice.co.th/product/graphic-card-vga-/nvidia-4000-series/vga-asus-geforce-rtx-4090-rog-strix-o24g-gaming-btf-24gb-gddr6x");
 
             Global.SSD_DT.Columns.Add("id", typeof(string));
             Global.SSD_DT.Columns.Add("type", typeof(string));
@@ -183,9 +183,9 @@ namespace DesignMyPC
             Global.CASE_DT.Columns.Add("price", typeof(int));
             Global.CASE_DT.Columns.Add("link", typeof(string));
 
-            string[] ffSet001 = { "Mini-ITX", "Micro-ATX", "ATX" };
-            string ff001 = string.Join(",", ffSet001);
-            Global.CASE_DT.Rows.Add("CASE001", "CASE", "NZXT", "H9", "Elite", "Mid-Tower", ff001, "black", 8790, "https://www.bnn.in.th/th/p/nzxt-computer-case-h9-elite-black-cm-h91eb-01-810074842518_z73l86?utm_source=notebookspec.com&utm_medium=referral&utm_campaign=ecom_notebookspec_PCcomponent_case_nzxt-h9-elite-black");
+            Global.CASE_DT.Rows.Add("CASE001", "CASE", "NZXT", "H9", "Elite", "Mid-Tower", "ATX", "black", 8790, "https://www.bnn.in.th/th/p/nzxt-computer-case-h9-elite-black-cm-h91eb-01-810074842518_z73l86?utm_source=notebookspec.com&utm_medium=referral&utm_campaign=ecom_notebookspec_PCcomponent_case_nzxt-h9-elite-black");
+            Global.CASE_DT.Rows.Add("CASE001", "CASE", "NZXT", "H9", "Elite", "Mid-Tower", "ATX", "black", 8790, "https://www.bnn.in.th/th/p/nzxt-computer-case-h9-elite-black-cm-h91eb-01-810074842518_z73l86?utm_source=notebookspec.com&utm_medium=referral&utm_campaign=ecom_notebookspec_PCcomponent_case_nzxt-h9-elite-black");
+            Global.CASE_DT.Rows.Add("CASE001", "CASE", "NZXT", "H9", "Elite", "Mid-Tower", "ATX", "black", 8790, "https://www.bnn.in.th/th/p/nzxt-computer-case-h9-elite-black-cm-h91eb-01-810074842518_z73l86?utm_source=notebookspec.com&utm_medium=referral&utm_campaign=ecom_notebookspec_PCcomponent_case_nzxt-h9-elite-black");
 
             Global.PcDT.Columns.Add("id", typeof(string));
             Global.PcDT.Columns.Add("author_id", typeof(string));

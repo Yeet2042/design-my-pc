@@ -32,22 +32,22 @@
             this.PerformanceFilter = new System.Windows.Forms.ComboBox();
             this.PriceFilter = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CardPanel0 = new System.Windows.Forms.Panel();
-            this.CardPanel5 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.SearchBox = new System.Windows.Forms.TextBox();
             this.CardPanel1 = new System.Windows.Forms.Panel();
+            this.CardPanel6 = new System.Windows.Forms.Panel();
             this.CardPanel2 = new System.Windows.Forms.Panel();
             this.CardPanel3 = new System.Windows.Forms.Panel();
             this.CardPanel4 = new System.Windows.Forms.Panel();
+            this.CardPanel5 = new System.Windows.Forms.Panel();
+            this.CardPanel10 = new System.Windows.Forms.Panel();
             this.CardPanel9 = new System.Windows.Forms.Panel();
             this.CardPanel8 = new System.Windows.Forms.Panel();
             this.CardPanel7 = new System.Windows.Forms.Panel();
-            this.CardPanel6 = new System.Windows.Forms.Panel();
             this.PageNumber = new System.Windows.Forms.Label();
             this.NextPageButton = new System.Windows.Forms.Button();
             this.PreviousPageButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Sortby = new System.Windows.Forms.ComboBox();
-            this.SearchBox = new System.Windows.Forms.TextBox();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,76 +99,98 @@
             this.panel1.Size = new System.Drawing.Size(200, 32);
             this.panel1.TabIndex = 14;
             // 
-            // CardPanel0
+            // pictureBox1
             // 
-            this.CardPanel0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
-            this.CardPanel0.Location = new System.Drawing.Point(0, 46);
-            this.CardPanel0.Name = "CardPanel0";
-            this.CardPanel0.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel0.TabIndex = 15;
+            this.pictureBox1.Image = global::DesignMyPC.Properties.Resources.magnify_icon_20px;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
-            // CardPanel5
+            // SearchBox
             // 
-            this.CardPanel5.Location = new System.Drawing.Point(0, 298);
-            this.CardPanel5.Name = "CardPanel5";
-            this.CardPanel5.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel5.TabIndex = 16;
+            this.SearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
+            this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBox.ForeColor = System.Drawing.Color.White;
+            this.SearchBox.Location = new System.Drawing.Point(37, 6);
+            this.SearchBox.Margin = new System.Windows.Forms.Padding(10);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(153, 19);
+            this.SearchBox.TabIndex = 3;
+            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
             // CardPanel1
             // 
-            this.CardPanel1.Location = new System.Drawing.Point(192, 46);
+            this.CardPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
+            this.CardPanel1.Location = new System.Drawing.Point(0, 46);
             this.CardPanel1.Name = "CardPanel1";
             this.CardPanel1.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel1.TabIndex = 16;
+            this.CardPanel1.TabIndex = 15;
+            // 
+            // CardPanel6
+            // 
+            this.CardPanel6.Location = new System.Drawing.Point(0, 298);
+            this.CardPanel6.Name = "CardPanel6";
+            this.CardPanel6.Size = new System.Drawing.Size(160, 220);
+            this.CardPanel6.TabIndex = 16;
             // 
             // CardPanel2
             // 
-            this.CardPanel2.Location = new System.Drawing.Point(384, 46);
+            this.CardPanel2.Location = new System.Drawing.Point(192, 46);
             this.CardPanel2.Name = "CardPanel2";
             this.CardPanel2.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel2.TabIndex = 17;
+            this.CardPanel2.TabIndex = 16;
             // 
             // CardPanel3
             // 
-            this.CardPanel3.Location = new System.Drawing.Point(576, 46);
+            this.CardPanel3.Location = new System.Drawing.Point(384, 46);
             this.CardPanel3.Name = "CardPanel3";
             this.CardPanel3.Size = new System.Drawing.Size(160, 220);
             this.CardPanel3.TabIndex = 17;
             // 
             // CardPanel4
             // 
-            this.CardPanel4.Location = new System.Drawing.Point(768, 46);
+            this.CardPanel4.Location = new System.Drawing.Point(576, 46);
             this.CardPanel4.Name = "CardPanel4";
             this.CardPanel4.Size = new System.Drawing.Size(160, 220);
             this.CardPanel4.TabIndex = 17;
             // 
+            // CardPanel5
+            // 
+            this.CardPanel5.Location = new System.Drawing.Point(768, 46);
+            this.CardPanel5.Name = "CardPanel5";
+            this.CardPanel5.Size = new System.Drawing.Size(160, 220);
+            this.CardPanel5.TabIndex = 17;
+            // 
+            // CardPanel10
+            // 
+            this.CardPanel10.Location = new System.Drawing.Point(768, 298);
+            this.CardPanel10.Name = "CardPanel10";
+            this.CardPanel10.Size = new System.Drawing.Size(160, 220);
+            this.CardPanel10.TabIndex = 19;
+            // 
             // CardPanel9
             // 
-            this.CardPanel9.Location = new System.Drawing.Point(768, 298);
+            this.CardPanel9.Location = new System.Drawing.Point(576, 298);
             this.CardPanel9.Name = "CardPanel9";
             this.CardPanel9.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel9.TabIndex = 19;
+            this.CardPanel9.TabIndex = 20;
             // 
             // CardPanel8
             // 
-            this.CardPanel8.Location = new System.Drawing.Point(576, 298);
+            this.CardPanel8.Location = new System.Drawing.Point(384, 298);
             this.CardPanel8.Name = "CardPanel8";
             this.CardPanel8.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel8.TabIndex = 20;
+            this.CardPanel8.TabIndex = 21;
             // 
             // CardPanel7
             // 
-            this.CardPanel7.Location = new System.Drawing.Point(384, 298);
+            this.CardPanel7.Location = new System.Drawing.Point(192, 298);
             this.CardPanel7.Name = "CardPanel7";
             this.CardPanel7.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel7.TabIndex = 21;
-            // 
-            // CardPanel6
-            // 
-            this.CardPanel6.Location = new System.Drawing.Point(192, 298);
-            this.CardPanel6.Name = "CardPanel6";
-            this.CardPanel6.Size = new System.Drawing.Size(160, 220);
-            this.CardPanel6.TabIndex = 18;
+            this.CardPanel7.TabIndex = 18;
             // 
             // PageNumber
             // 
@@ -205,15 +227,6 @@
             this.PreviousPageButton.UseVisualStyleBackColor = true;
             this.PreviousPageButton.Click += new System.EventHandler(this.PreviousPageButton_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesignMyPC.Properties.Resources.magnify_icon_20px;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // Sortby
             // 
             this.Sortby.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
@@ -225,19 +238,6 @@
             this.Sortby.TabIndex = 2;
             this.Sortby.Text = "Sort by";
             this.Sortby.SelectedIndexChanged += new System.EventHandler(this.Sortby_SelectedIndexChanged);
-            // 
-            // SearchBox
-            // 
-            this.SearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
-            this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBox.ForeColor = System.Drawing.Color.White;
-            this.SearchBox.Location = new System.Drawing.Point(37, 6);
-            this.SearchBox.Margin = new System.Windows.Forms.Padding(10);
-            this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(153, 19);
-            this.SearchBox.TabIndex = 3;
-            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
             // SubmitButton
             // 
@@ -265,16 +265,16 @@
             this.Controls.Add(this.PageNumber);
             this.Controls.Add(this.NextPageButton);
             this.Controls.Add(this.PreviousPageButton);
+            this.Controls.Add(this.CardPanel10);
+            this.Controls.Add(this.CardPanel5);
             this.Controls.Add(this.CardPanel9);
-            this.Controls.Add(this.CardPanel4);
             this.Controls.Add(this.CardPanel8);
+            this.Controls.Add(this.CardPanel4);
             this.Controls.Add(this.CardPanel7);
             this.Controls.Add(this.CardPanel3);
-            this.Controls.Add(this.CardPanel6);
             this.Controls.Add(this.CardPanel2);
+            this.Controls.Add(this.CardPanel6);
             this.Controls.Add(this.CardPanel1);
-            this.Controls.Add(this.CardPanel5);
-            this.Controls.Add(this.CardPanel0);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Sortby);
             this.Controls.Add(this.PriceFilter);
@@ -299,16 +299,16 @@
         private System.Windows.Forms.ComboBox PriceFilter;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel CardPanel0;
-        private System.Windows.Forms.Panel CardPanel5;
         private System.Windows.Forms.Panel CardPanel1;
+        private System.Windows.Forms.Panel CardPanel6;
         private System.Windows.Forms.Panel CardPanel2;
         private System.Windows.Forms.Panel CardPanel3;
         private System.Windows.Forms.Panel CardPanel4;
+        private System.Windows.Forms.Panel CardPanel5;
+        private System.Windows.Forms.Panel CardPanel10;
         private System.Windows.Forms.Panel CardPanel9;
         private System.Windows.Forms.Panel CardPanel8;
         private System.Windows.Forms.Panel CardPanel7;
-        private System.Windows.Forms.Panel CardPanel6;
         private System.Windows.Forms.Button PreviousPageButton;
         private System.Windows.Forms.Button NextPageButton;
         private System.Windows.Forms.Label PageNumber;
