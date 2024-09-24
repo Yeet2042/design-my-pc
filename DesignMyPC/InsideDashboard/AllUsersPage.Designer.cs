@@ -441,6 +441,7 @@
             this.UsersDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.UsersDataGridView.Size = new System.Drawing.Size(904, 327);
             this.UsersDataGridView.TabIndex = 58;
+            this.UsersDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersDataGridView_CellClick);
             this.UsersDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersDataGridView_CellContentClick);
             // 
             // panel7

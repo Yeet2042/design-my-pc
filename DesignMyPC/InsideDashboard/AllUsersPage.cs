@@ -21,6 +21,11 @@ namespace DesignMyPC.InsideDashboard
 
         private void UsersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void UsersDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             index = e.RowIndex;
 
             IDTextBox.Text = Global.UserDT.Rows[index]["id"].ToString();
@@ -30,8 +35,6 @@ namespace DesignMyPC.InsideDashboard
             UsernameTextBox.Text = Global.UserDT.Rows[index]["username"].ToString();
             EmailTextBox.Text = Global.UserDT.Rows[index]["email"].ToString();
             PasswordTextBox.Text = Global.UserDT.Rows[index]["password"].ToString();
-
-            UsersDataGridView.DataSource = Global.UserDT;
         }
 
         private void AddButton_Click(object sender, EventArgs e)
