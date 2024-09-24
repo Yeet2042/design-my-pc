@@ -68,7 +68,7 @@ namespace DesignMyPC
             Dashboard.Show();
         }
 
-        private static string AutoID(string prefix, DataTable dt)
+        public static string AutoID(string prefix, DataTable dt)
         {
             string newID;
             int rowMax = dt.Rows.Count - 1;

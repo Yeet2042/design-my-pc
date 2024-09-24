@@ -26,8 +26,8 @@ namespace DesignMyPC
             Global.UserDT.Columns.Add("password", typeof(string));
             Global.UserDT.Columns.Add("role", typeof(string));
 
-            Global.UserDT.Rows.Add("USER001", "admin", "admin", "admin", "11/11/1991", "admin@admin.com", "admin", "admin");
-            Global.UserDT.Rows.Add("USER002", "user", "user", "user", "22/22/2000", "user@user.com", "user", "user");
+            Global.UserDT.Rows.Add("USER001", "admin", "admin", "admin", "11/11/2540", "admin@admin.com", "admin", "admin");
+            Global.UserDT.Rows.Add("USER002", "user", "user", "user", "22/12/2546", "user@user.com", "user", "user");
 
             Global.CPU_DT.Columns.Add("id", typeof(string));
             Global.CPU_DT.Columns.Add("type", typeof(string));

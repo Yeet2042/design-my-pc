@@ -177,6 +177,7 @@
             // 
             // BirthPicker
             // 
+            this.BirthPicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
             this.BirthPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BirthPicker.Location = new System.Drawing.Point(49, 12);
             this.BirthPicker.Name = "BirthPicker";
