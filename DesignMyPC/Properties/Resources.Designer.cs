@@ -273,6 +273,16 @@ namespace DesignMyPC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap user_delete_icon_24px {
+            get {
+                object obj = ResourceManager.GetObject("user_delete_icon_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_icon_24px {
             get {
                 object obj = ResourceManager.GetObject("user_icon_24px", resourceCulture);

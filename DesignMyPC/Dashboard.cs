@@ -78,6 +78,16 @@ namespace DesignMyPC
             allComputerPage.Show();
         }
 
+        private void OpenSettingPage()
+        {
+            InsideDashboard.SettingPage settingPage = new InsideDashboard.SettingPage();
+            settingPage.TopLevel = false;
+
+            DashboardContainer.Controls.Clear();
+            DashboardContainer.Controls.Add(settingPage);
+            settingPage.Show();
+        }
+
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Global.CloseApplication();
@@ -109,7 +119,7 @@ namespace DesignMyPC
             OpenHomePage();
 
             Global.DashboardSelectedPage = HomeButton.Text;
-            DashboardLabel.Text = Global.DashboardSelectedPage.Trim();
+            DashboardLabel.Text = HomeButton.Text.Trim();
 
             HomeButton.BackColor = Color.FromArgb(42, 54, 80);
             ComponentsButton.BackColor = Color.FromArgb(51, 62, 83);
@@ -122,7 +132,7 @@ namespace DesignMyPC
             OpenComponentsPage();
 
             Global.DashboardSelectedPage = ComponentsButton.Text;
-            DashboardLabel.Text = Global.DashboardSelectedPage.Trim();
+            DashboardLabel.Text = ComponentsButton.Text.Trim();
 
             HomeButton.BackColor = Color.FromArgb(51, 62, 83);
             ComponentsButton.BackColor = Color.FromArgb(42, 54, 80);
@@ -135,7 +145,7 @@ namespace DesignMyPC
             OpenAllUsersPage();
             
             Global.DashboardSelectedPage = UsersButton.Text;
-            DashboardLabel.Text = Global.DashboardSelectedPage.Trim();
+            DashboardLabel.Text = UsersButton.Text.Trim();
 
             HomeButton.BackColor = Color.FromArgb(51, 62, 83);
             ComponentsButton.BackColor = Color.FromArgb(51, 62, 83);
@@ -148,12 +158,25 @@ namespace DesignMyPC
             OpenAllComputersPage();
 
             Global.DashboardSelectedPage = PCsButton.Text;
-            DashboardLabel.Text = Global.DashboardSelectedPage.Trim();
+            DashboardLabel.Text = PCsButton.Text.Trim();
 
             HomeButton.BackColor = Color.FromArgb(51, 62, 83);
             ComponentsButton.BackColor = Color.FromArgb(51, 62, 83);
             UsersButton.BackColor = Color.FromArgb(51, 62, 83);
             PCsButton.BackColor = Color.FromArgb(42, 54, 80);
+        }
+
+        private void SettingButton_Click(object sender, EventArgs e)
+        {
+            OpenSettingPage();
+
+            Global.DashboardSelectedPage = SettingButton.Text;
+            DashboardLabel.Text = SettingButton.Text;
+
+            HomeButton.BackColor = Color.FromArgb(51, 62, 83);
+            ComponentsButton.BackColor = Color.FromArgb(51, 62, 83);
+            UsersButton.BackColor = Color.FromArgb(51, 62, 83);
+            PCsButton.BackColor = Color.FromArgb(51, 62, 83);
         }
     }
 }

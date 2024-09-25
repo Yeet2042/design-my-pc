@@ -101,6 +101,12 @@
     <Compile Include="InsideDashboard\HomePageCard.Designer.cs">
       <DependentUpon>HomePageCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="InsideDashboard\SettingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDashboard\SettingPage.Designer.cs">
+      <DependentUpon>SettingPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InsideDashboard\HomePageCard.resx">
       <DependentUpon>HomePageCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsideDashboard\SettingPage.resx">
+      <DependentUpon>SettingPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LandingPage.resx">
       <DependentUpon>LandingPage.cs</DependentUpon>
@@ -257,6 +266,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\left_icon_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_delete_icon_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

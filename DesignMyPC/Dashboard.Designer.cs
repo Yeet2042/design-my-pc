@@ -31,6 +31,9 @@
             this.LogoutButton = new System.Windows.Forms.Button();
             this.SettingButton = new System.Windows.Forms.Button();
             this.DashboardLabel = new System.Windows.Forms.Label();
+            this.DashboardContainer = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.NameLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PCsButton = new System.Windows.Forms.Button();
             this.UsersButton = new System.Windows.Forms.Button();
@@ -39,9 +42,6 @@
             this.MinimizeButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.DashboardContainer = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.NameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +75,7 @@
             this.SettingButton.TabIndex = 19;
             this.SettingButton.Text = "ตั้งค่า";
             this.SettingButton.UseVisualStyleBackColor = false;
+            this.SettingButton.Click += new System.EventHandler(this.SettingButton_Click);
             // 
             // DashboardLabel
             // 
@@ -86,6 +87,35 @@
             this.DashboardLabel.Size = new System.Drawing.Size(89, 37);
             this.DashboardLabel.TabIndex = 20;
             this.DashboardLabel.Text = "label";
+            // 
+            // DashboardContainer
+            // 
+            this.DashboardContainer.Location = new System.Drawing.Point(320, 128);
+            this.DashboardContainer.Name = "DashboardContainer";
+            this.DashboardContainer.Size = new System.Drawing.Size(928, 560);
+            this.DashboardContainer.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(1083, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 25);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "สวัสดี,";
+            // 
+            // NameLabel
+            // 
+            this.NameLabel.AutoSize = true;
+            this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameLabel.ForeColor = System.Drawing.Color.White;
+            this.NameLabel.Location = new System.Drawing.Point(1156, 81);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(69, 25);
+            this.NameLabel.TabIndex = 24;
+            this.NameLabel.Text = "name";
             // 
             // pictureBox1
             // 
@@ -206,35 +236,6 @@
             this.label1.Size = new System.Drawing.Size(175, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "    DesignMyPC";
-            // 
-            // DashboardContainer
-            // 
-            this.DashboardContainer.Location = new System.Drawing.Point(320, 128);
-            this.DashboardContainer.Name = "DashboardContainer";
-            this.DashboardContainer.Size = new System.Drawing.Size(928, 560);
-            this.DashboardContainer.TabIndex = 22;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1083, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 25);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "สวัสดี,";
-            // 
-            // NameLabel
-            // 
-            this.NameLabel.AutoSize = true;
-            this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.ForeColor = System.Drawing.Color.White;
-            this.NameLabel.Location = new System.Drawing.Point(1156, 81);
-            this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(69, 25);
-            this.NameLabel.TabIndex = 24;
-            this.NameLabel.Text = "name";
             // 
             // Dashboard
             // 
