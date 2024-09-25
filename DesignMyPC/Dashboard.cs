@@ -13,31 +13,12 @@ namespace DesignMyPC
 {
     public partial class Dashboard : Form
     {
-        private Form Home;
-        private Form Components;
-        private Form allUsers;
-        private Form allPCs;
         public Dashboard()
         {
             InitializeComponent();
 
             HomeButton.BackColor = Color.FromArgb(42, 54, 80);
             DashboardLabel.Text = Global.DashboardSelectedPage.Trim();
-
-            InsideDashboard.HomePage homePage = new InsideDashboard.HomePage();
-            InsideDashboard.ComponentsPage componentsPage = new InsideDashboard.ComponentsPage();
-            InsideDashboard.AllUsersPage allUsersPage = new InsideDashboard.AllUsersPage();
-            InsideDashboard.AllComputersPage allComputerPage = new InsideDashboard.AllComputersPage();
-
-            homePage.TopLevel = false;
-            componentsPage.TopLevel = false;
-            allUsersPage.TopLevel = false;
-            allComputerPage.TopLevel = false;
-
-            Home = homePage;
-            Components = componentsPage;
-            allUsers = allUsersPage;
-            allPCs = allComputerPage;
 
             OpenHomePage();
 
@@ -59,30 +40,42 @@ namespace DesignMyPC
 
         private void OpenHomePage()
         {
+            InsideDashboard.HomePage homePage = new InsideDashboard.HomePage();
+            homePage.TopLevel = false;
+
             DashboardContainer.Controls.Clear();
-            DashboardContainer.Controls.Add(Home);
-            Home.Show();
+            DashboardContainer.Controls.Add(homePage);
+            homePage.Show();
         }
 
         private void OpenComponentsPage()
         {
+            InsideDashboard.ComponentsPage componentsPage = new InsideDashboard.ComponentsPage();
+            componentsPage.TopLevel = false;
+
             DashboardContainer.Controls.Clear();
-            DashboardContainer.Controls.Add(Components);
-            Components.Show();
+            DashboardContainer.Controls.Add(componentsPage);
+            componentsPage.Show();
         }
 
         private void OpenAllUsersPage()
         {
+            InsideDashboard.AllUsersPage allUsersPage = new InsideDashboard.AllUsersPage();
+            allUsersPage.TopLevel = false;
+
             DashboardContainer.Controls.Clear();
-            DashboardContainer.Controls.Add(allUsers);
-            allUsers.Show();
+            DashboardContainer.Controls.Add(allUsersPage);
+            allUsersPage.Show();
         }
 
         private void OpenAllComputersPage()
         {
+            InsideDashboard.AllComputersPage allComputerPage = new InsideDashboard.AllComputersPage();
+            allComputerPage.TopLevel = false;
+
             DashboardContainer.Controls.Clear();
-            DashboardContainer.Controls.Add(allPCs);
-            allPCs.Show();
+            DashboardContainer.Controls.Add(allComputerPage);
+            allComputerPage.Show();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
