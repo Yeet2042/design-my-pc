@@ -35,6 +35,14 @@ namespace DesignMyPC.InsideDashboard
             UsernameTextBox.Text = Global.UserDT.Rows[index]["username"].ToString();
             EmailTextBox.Text = Global.UserDT.Rows[index]["email"].ToString();
             PasswordTextBox.Text = Global.UserDT.Rows[index]["password"].ToString();
+            if (Global.UserDT.Rows[index]["role"].ToString() == "admin")
+            {
+                AdminRadioButton.Checked = true;
+            }
+            else
+            {
+                UserRadioButton.Checked = true;
+            }
         }
 
         private void AddButton_Click(object sender, EventArgs e)
