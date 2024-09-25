@@ -80,6 +80,15 @@ namespace DesignMyPC.InsideDashboard
 
             if (type == "CPU")
             {
+                if (brand == "AMD")
+                {
+                    ComponentImage.Image = Properties.Resources.amd_cpu_90px;
+                }
+                else if (brand == "INTEL")
+                {
+                    ComponentImage.Image = Properties.Resources.intel_cpu_90px;
+                }
+
                 label1.Text = "Cores";
                 label2.Text = "TDP";
                 label3.Text = "Speed";

@@ -288,7 +288,7 @@ namespace DesignMyPC.InsideDashboard
                     else if (i < FilteredCPU_DT.Rows.Count 
                                     + FilteredMB_DT.Rows.Count)
                     {
-                        int mbI = i - FilteredMB_DT.Rows.Count;
+                        int mbI = i - FilteredCPU_DT.Rows.Count;
                         card = new ComponentCard(
                             FilteredMB_DT.Rows[mbI]["type"].ToString(),
                             FilteredMB_DT.Rows[mbI]["brand"].ToString(),

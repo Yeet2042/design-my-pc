@@ -49,6 +49,7 @@ namespace DesignMyPC
             string[] chipsetSet001 = { "A620", "B650", "B650E", "X670", "X670E", "X870", "X870E" };
             string chipset001 = string.Join(",", chipsetSet001);
             Global.CPU_DT.Rows.Add("CPU001", "CPU", "AMD", "Ryzen 9", "9950X", "AM5", chipset001, 16, 32, 4.3, 5.7, 5, 170, 100, 26290, "https://www.bnn.in.th/th/p/computer-hardware-diy/cpu-computer-hardware-diy/amd-cpu-computer-hardware-diy/amd-cpu-ryzen-9-9950x-43ghz-16c32t-am5-730143315272_zpqgko?ref=search-result");
+            Global.CPU_DT.Rows.Add("CPU002", "CPU", "INTEL", "Core I9", "14900K", "LGA 1700", "", 24, 32, 2.4, 6, 10, 125, 100, 22500, "https://www.jib.co.th/web/product/readProduct/63040/INTEL-CORE-I9-14900K--SOCKET-LGA-1700---%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2---CPU-COOLER-NOT-INCLUDED-");
 
             Global.MB_DT.Columns.Add("id", typeof(string));
             Global.MB_DT.Columns.Add("type", typeof(string));

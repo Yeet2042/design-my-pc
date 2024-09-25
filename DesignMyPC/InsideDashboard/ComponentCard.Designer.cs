@@ -32,12 +32,12 @@
             this.ComponentLabel2 = new System.Windows.Forms.Label();
             this.ComponentLabel1 = new System.Windows.Forms.Label();
             this.ComponentName = new System.Windows.Forms.Label();
-            this.PcImage = new System.Windows.Forms.PictureBox();
+            this.ComponentImage = new System.Windows.Forms.PictureBox();
             this.PriceLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.PcImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComponentImage)).BeginInit();
             this.SuspendLayout();
             // 
             // ComponentLabel3
@@ -84,13 +84,13 @@
             this.ComponentName.TabIndex = 5;
             this.ComponentName.Text = "ComponentName";
             // 
-            // PcImage
+            // ComponentImage
             // 
-            this.PcImage.Location = new System.Drawing.Point(36, 39);
-            this.PcImage.Name = "PcImage";
-            this.PcImage.Size = new System.Drawing.Size(90, 90);
-            this.PcImage.TabIndex = 6;
-            this.PcImage.TabStop = false;
+            this.ComponentImage.Location = new System.Drawing.Point(36, 39);
+            this.ComponentImage.Name = "ComponentImage";
+            this.ComponentImage.Size = new System.Drawing.Size(90, 90);
+            this.ComponentImage.TabIndex = 6;
+            this.ComponentImage.TabStop = false;
             // 
             // PriceLabel
             // 
@@ -149,12 +149,12 @@
             this.Controls.Add(this.ComponentLabel3);
             this.Controls.Add(this.ComponentLabel2);
             this.Controls.Add(this.ComponentLabel1);
-            this.Controls.Add(this.PcImage);
+            this.Controls.Add(this.ComponentImage);
             this.Controls.Add(this.ComponentName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ComponentCard";
             this.Text = "ComponentCard";
-            ((System.ComponentModel.ISupportInitialize)(this.PcImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComponentImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,7 +165,7 @@
         private System.Windows.Forms.Label ComponentLabel3;
         private System.Windows.Forms.Label ComponentLabel2;
         private System.Windows.Forms.Label ComponentLabel1;
-        private System.Windows.Forms.PictureBox PcImage;
+        private System.Windows.Forms.PictureBox ComponentImage;
         private System.Windows.Forms.Label ComponentName;
         private System.Windows.Forms.Label PriceLabel;
         private System.Windows.Forms.Label label1;

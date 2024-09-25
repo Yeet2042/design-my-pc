@@ -63,6 +63,16 @@ namespace DesignMyPC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap amd_cpu_90px {
+            get {
+                object obj = ResourceManager.GetObject("amd_cpu_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap avatar_icon_48px {
             get {
                 object obj = ResourceManager.GetObject("avatar_icon_48px", resourceCulture);
@@ -136,6 +146,16 @@ namespace DesignMyPC.Properties {
         internal static System.Drawing.Bitmap home_icon_24px {
             get {
                 object obj = ResourceManager.GetObject("home_icon_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap intel_cpu_90px {
+            get {
+                object obj = ResourceManager.GetObject("intel_cpu_90px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

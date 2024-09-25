@@ -270,5 +270,11 @@
   <ItemGroup>
     <None Include="Resources\user_delete_icon_24px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intel_cpu_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amd_cpu_90px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
