@@ -62,28 +62,67 @@ namespace DesignMyPC.InsideDashboard
                         COOLERTextBox.Text,
                         CASETextBox.Text
                     );
-                CreateByTextBox.Text,
-                        PCNameTextBox.Text,
-                        CPUTextBox.Text,
-                        MBTextBox.Text,
-                        RAMTextBox.Text,
-                        GPUTextBox.Text,
-                        SSDTextBox.Text,
-                        HDDTextBox.Text,
-                        PSUTextBox.Text,
-                        COOLERTextBox.Text,
-                        CASETextBox.Text
+
+                PCsDataGridView.DataSource = Global.PcDT;
+                CreateByTextBox.Text = "";
+                PCNameTextBox.Text = "";
+                CPUTextBox.Text = "";
+                MBTextBox.Text = "";
+                RAMTextBox.Text = "";
+                GPUTextBox.Text = "";
+                SSDTextBox.Text = "";
+                HDDTextBox.Text = "";
+                PSUTextBox.Text = "";
+                COOLERTextBox.Text = "";
+                CASETextBox.Text = "";
             }
         }
 
         private void EditButton_Click(object sender, EventArgs e)
         {
+            Global.PcDT.Rows[index]["id"] = IDTextBox.Text;
+            Global.PcDT.Rows[index]["name"] = PCNameTextBox.Text;
+            Global.PcDT.Rows[index]["author_id"] = CreateByTextBox.Text;
+            Global.PcDT.Rows[index]["cpu"] = CPUTextBox.Text;
+            Global.PcDT.Rows[index]["mb"] = MBTextBox.Text;
+            Global.PcDT.Rows[index]["ram"] = RAMTextBox.Text;
+            Global.PcDT.Rows[index]["gpu"] = GPUTextBox.Text;
+            Global.PcDT.Rows[index]["ssd"] = SSDTextBox.Text;
+            Global.PcDT.Rows[index]["hdd"] = HDDTextBox.Text;
+            Global.PcDT.Rows[index]["psu"] = PSUTextBox.Text;
+            Global.PcDT.Rows[index]["cooling"] = COOLERTextBox.Text;
+            Global.PcDT.Rows[index]["case"] = CASETextBox.Text;
 
+            PCsDataGridView.DataSource = Global.PcDT;
+            CreateByTextBox.Text = "";
+            PCNameTextBox.Text = "";
+            CPUTextBox.Text = "";
+            MBTextBox.Text = "";
+            RAMTextBox.Text = "";
+            GPUTextBox.Text = "";
+            SSDTextBox.Text = "";
+            HDDTextBox.Text = "";
+            PSUTextBox.Text = "";
+            COOLERTextBox.Text = "";
+            CASETextBox.Text = "";
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
+            Global.PcDT.Rows[index].Delete();
 
+            PCsDataGridView.DataSource = Global.PcDT;
+            CreateByTextBox.Text = "";
+            PCNameTextBox.Text = "";
+            CPUTextBox.Text = "";
+            MBTextBox.Text = "";
+            RAMTextBox.Text = "";
+            GPUTextBox.Text = "";
+            SSDTextBox.Text = "";
+            HDDTextBox.Text = "";
+            PSUTextBox.Text = "";
+            COOLERTextBox.Text = "";
+            CASETextBox.Text = "";
         }
     }
 }
