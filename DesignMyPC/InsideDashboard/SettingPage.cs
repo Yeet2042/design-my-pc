@@ -94,5 +94,25 @@ namespace DesignMyPC.InsideDashboard
             Global.LogInEmail = "";
             Global.LogInRole = "";
         }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("แน่ใจ?", "ลบบัญชี", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                DataRow[] rowUpdate = Global.UserDT.Select($"id = '{Global.LogInID}'");
+
+                rowUpdate[0].Delete();
+
+                MessageBox.Show("ลบบัญชีสำเร็จ");
+
+                Global.OpenLoginPage();
+
+                Global.LogInID = "";
+                Global.LogInUser = "";
+                Global.LogInEmail = "";
+                Global.LogInRole = "";
+            }
+        }
     }
 }

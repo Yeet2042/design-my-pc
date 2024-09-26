@@ -256,6 +256,7 @@
             this.DeleteButton.TabIndex = 79;
             this.DeleteButton.Text = "ลบบัญชี";
             this.DeleteButton.UseVisualStyleBackColor = false;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // SettingPage
             // 
