@@ -63,9 +63,79 @@ namespace DesignMyPC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1X_ram_90px {
+            get {
+                object obj = ResourceManager.GetObject("1X_ram_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2X_ram_90px {
+            get {
+                object obj = ResourceManager.GetObject("2X_ram_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aio_90px {
+            get {
+                object obj = ResourceManager.GetObject("aio_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap amd_cpu_90px {
             get {
                 object obj = ResourceManager.GetObject("amd_cpu_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap amd_gpu_90px {
+            get {
+                object obj = ResourceManager.GetObject("amd_gpu_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap atx_case_90px {
+            get {
+                object obj = ResourceManager.GetObject("atx_case_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap atx_mb_90px {
+            get {
+                object obj = ResourceManager.GetObject("atx_mb_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap atx_psu_90px {
+            get {
+                object obj = ResourceManager.GetObject("atx_psu_90px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +203,16 @@ namespace DesignMyPC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hdd_90px {
+            get {
+                object obj = ResourceManager.GetObject("hdd_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap highend_pc_90px {
             get {
                 object obj = ResourceManager.GetObject("highend_pc_90px", resourceCulture);
@@ -156,6 +236,26 @@ namespace DesignMyPC.Properties {
         internal static System.Drawing.Bitmap intel_cpu_90px {
             get {
                 object obj = ResourceManager.GetObject("intel_cpu_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap itx_case_90pz {
+            get {
+                object obj = ResourceManager.GetObject("itx_case_90pz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap itx_mb_90px {
+            get {
+                object obj = ResourceManager.GetObject("itx_mb_90px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +313,39 @@ namespace DesignMyPC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap M2_nvme_ssd_2px {
+            get {
+                object obj = ResourceManager.GetObject("M2_nvme_ssd_2px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M2_sata_ssd_90px {
+            get {
+                object obj = ResourceManager.GetObject("M2_sata_ssd_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap magnify_icon_20px {
             get {
                 object obj = ResourceManager.GetObject("magnify_icon_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap matx_mb_90px {
+            get {
+                object obj = ResourceManager.GetObject("matx_mb_90px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +366,16 @@ namespace DesignMyPC.Properties {
         internal static System.Drawing.Bitmap minimize_icon_24px {
             get {
                 object obj = ResourceManager.GetObject("minimize_icon_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nvidia_gpu_90px {
+            get {
+                object obj = ResourceManager.GetObject("nvidia_gpu_90px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +423,29 @@ namespace DesignMyPC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sata_ssd_90px {
+            get {
+                object obj = ResourceManager.GetObject("sata_ssd_90px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap share_147px {
             get {
                 object obj = ResourceManager.GetObject("share_147px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tower_90px {
+            get {
+                object obj = ResourceManager.GetObject("tower_90px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

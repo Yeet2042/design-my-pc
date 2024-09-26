@@ -16,7 +16,7 @@ namespace DesignMyPC.InsideDashboard
     {
         public ComponentCard(
             string type, 
-            string brand , 
+            string brand, 
             string serie, 
             string model, 
 
@@ -99,6 +99,19 @@ namespace DesignMyPC.InsideDashboard
             }
             else if (type == "MB")
             {
+                if (FF == "ATX")
+                {
+                    ComponentImage.Image = Properties.Resources.atx_mb_90px;
+                }
+                else if (FF == "mATX")
+                {
+                    ComponentImage.Image = Properties.Resources.matx_mb_90px;
+                }
+                else if (FF == "ITX")
+                {
+                    ComponentImage.Image = Properties.Resources.itx_mb_90px;
+                }
+
                 ComponentName.Text = brand + " " + serie + " " + model + " " + chipset;
 
                 label1.Text = "Socket";
@@ -110,6 +123,14 @@ namespace DesignMyPC.InsideDashboard
                 ComponentLabel3.Text = FF;
             }else if (type == "RAM")
             {
+                if (ramRamType == "DDR5")
+                {
+                    ComponentImage.Image = Properties.Resources._2X_ram_90px;
+                }
+                else if (ramRamType == "DDR4")
+                {
+                    ComponentImage.Image = Properties.Resources._1X_ram_90px;
+                }
 
                 label1.Text = "Type";
                 label2.Text = "Size";
@@ -120,6 +141,7 @@ namespace DesignMyPC.InsideDashboard
                 ComponentLabel3.Text = speed + " Mhz";
             }else if (type == "GPU")
             {
+                ComponentImage.Image = Properties.Resources.nvidia_gpu_90px;
 
                 label1.Text = "Speed";
                 label2.Text = "Ram";
@@ -130,6 +152,18 @@ namespace DesignMyPC.InsideDashboard
                 ComponentLabel3.Text = gpuRamSize + " gb";
             }else if (type == "SSD")
             {
+                if (ssdInterface == "M.2" && protocal == "NVME")
+                {
+                    ComponentImage.Image = Properties.Resources.M2_nvme_ssd_2px;
+                }
+                else if (ssdInterface == "M.2" && protocal == "SATA")
+                {
+                    ComponentImage.Image = Properties.Resources.M2_sata_ssd_90px;
+                }
+                else if (ssdInterface == "sata")
+                {
+                    ComponentImage.Image = Properties.Resources.sata_ssd_90px;
+                }
 
                 label1.Text = "Type";
                 label2.Text = "Size";
@@ -140,6 +174,7 @@ namespace DesignMyPC.InsideDashboard
                 ComponentLabel3.Text = ssdRead + " / " + ssdWrite;
             }else if (type == "HDD")
             {
+                ComponentImage.Image = Properties.Resources.hdd_90px;
 
                 label1.Text = "Type";
                 label2.Text = "Size";
@@ -150,6 +185,7 @@ namespace DesignMyPC.InsideDashboard
                 ComponentLabel3.Text = hddSpeed + " rpm";
             }else if (type == "PSU")
             {
+                ComponentImage.Image = Properties.Resources.atx_psu_90px;
 
                 label1.Text = "Type";
                 label2.Text = "Wattage";
@@ -158,8 +194,16 @@ namespace DesignMyPC.InsideDashboard
                 ComponentLabel1.Text = psuFF;
                 ComponentLabel2.Text = psuPower + " w";
                 ComponentLabel3.Text = psuCert;
-            }else if (type == "CL")
+            }else if (coolerType == "AIO")
             {
+                if (coolerType == "AIO")
+                {
+                    ComponentImage.Image = Properties.Resources.aio_90px;
+                }
+                else if (coolerType == "TOWER")
+                {
+                    ComponentImage.Image = Properties.Resources.tower_90px;
+                }
 
                 label1.Text = "Type";
                 label2.Text = "Size";
@@ -170,6 +214,14 @@ namespace DesignMyPC.InsideDashboard
                 ComponentLabel3.Text = coolerTDP;
             }else if (type == "CASE")
             {
+                if (mbSize == "ATX")
+                {
+                    ComponentImage.Image = Properties.Resources.atx_case_90px;
+                }
+                else if (coolerType == "ITX")
+                {
+                    ComponentImage.Image = Properties.Resources.itx_case_90pz;
+                }
 
                 label1.Text = "Size";
                 label2.Text = "Max MB";

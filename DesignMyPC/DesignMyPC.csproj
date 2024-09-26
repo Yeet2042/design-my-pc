@@ -276,5 +276,53 @@
   <ItemGroup>
     <None Include="Resources\amd_cpu_90px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1X_ram_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2X_ram_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atx_case_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atx_mb_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atx_psu_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itx_case_90pz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itx_mb_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M2_nvme_ssd_2px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M2_sata_ssd_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\matx_mb_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sata_ssd_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tower_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amd_gpu_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nvidia_gpu_90px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

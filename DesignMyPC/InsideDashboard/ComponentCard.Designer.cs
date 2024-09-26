@@ -32,11 +32,11 @@
             this.ComponentLabel2 = new System.Windows.Forms.Label();
             this.ComponentLabel1 = new System.Windows.Forms.Label();
             this.ComponentName = new System.Windows.Forms.Label();
-            this.ComponentImage = new System.Windows.Forms.PictureBox();
             this.PriceLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.ComponentImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ComponentImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,14 +84,6 @@
             this.ComponentName.TabIndex = 5;
             this.ComponentName.Text = "ComponentName";
             // 
-            // ComponentImage
-            // 
-            this.ComponentImage.Location = new System.Drawing.Point(36, 39);
-            this.ComponentImage.Name = "ComponentImage";
-            this.ComponentImage.Size = new System.Drawing.Size(90, 90);
-            this.ComponentImage.TabIndex = 6;
-            this.ComponentImage.TabStop = false;
-            // 
             // PriceLabel
             // 
             this.PriceLabel.AutoSize = true;
@@ -135,6 +127,14 @@
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "label1";
+            // 
+            // ComponentImage
+            // 
+            this.ComponentImage.Location = new System.Drawing.Point(36, 39);
+            this.ComponentImage.Name = "ComponentImage";
+            this.ComponentImage.Size = new System.Drawing.Size(90, 90);
+            this.ComponentImage.TabIndex = 6;
+            this.ComponentImage.TabStop = false;
             // 
             // ComponentCard
             // 
