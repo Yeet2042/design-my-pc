@@ -44,6 +44,7 @@
             this.DesignButton.TabIndex = 1;
             this.DesignButton.Text = "กดเพื่อออกแบบ";
             this.DesignButton.UseVisualStyleBackColor = false;
+            this.DesignButton.Click += new System.EventHandler(this.DesignButton_Click);
             // 
             // DesignCard
             // 

@@ -16,5 +16,14 @@ namespace DesignMyPC.InsideDashboard
         {
             InitializeComponent();
         }
+
+        private void DesignButton_Click(object sender, EventArgs e)
+        {
+            DesignPage designPage = new DesignPage();
+            designPage.TopLevel = false;
+            Global.Design = designPage;
+
+            Global.OpenDesign();
+        }
     }
 }

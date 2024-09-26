@@ -52,6 +52,12 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="DesignPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesignPage.Designer.cs">
+      <DependentUpon>DesignPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="InsideDashboard\AddComponent.cs">
       <SubType>Form</SubType>
@@ -135,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignPage.resx">
+      <DependentUpon>DesignPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsideDashboard\AddComponent.resx">
       <DependentUpon>AddComponent.cs</DependentUpon>
@@ -323,6 +332,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nvidia_gpu_90px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="InsideDesign\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_icon_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
