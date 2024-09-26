@@ -23,18 +23,21 @@ namespace DesignMyPC.InsideDashboard
         {
             index = e.RowIndex;
 
-            IDTextBox.Text = Global.PcDT.Rows[index]["id"].ToString();
-            PCNameTextBox.Text = Global.PcDT.Rows[index]["name"].ToString();
-            CreateByTextBox.Text = Global.PcDT.Rows[index]["author_id"].ToString();
-            CPUTextBox.Text = Global.PcDT.Rows[index]["cpu"].ToString();
-            MBTextBox.Text = Global.PcDT.Rows[index]["mb"].ToString();
-            RAMTextBox.Text = Global.PcDT.Rows[index]["ram"].ToString();
-            GPUTextBox.Text = Global.PcDT.Rows[index]["gpu"].ToString();
-            SSDTextBox.Text = Global.PcDT.Rows[index]["ssd"].ToString();
-            HDDTextBox.Text = Global.PcDT.Rows[index]["hdd"].ToString();
-            PSUTextBox.Text = Global.PcDT.Rows[index]["psu"].ToString();
-            COOLERTextBox.Text = Global.PcDT.Rows[index]["cooling"].ToString();
-            CASETextBox.Text = Global.PcDT.Rows[index]["case"].ToString();
+            if (index >= 0 && index < Global.PcDT.Rows.Count)
+            {
+                IDTextBox.Text = Global.PcDT.Rows[index]["id"].ToString();
+                PCNameTextBox.Text = Global.PcDT.Rows[index]["name"].ToString();
+                CreateByTextBox.Text = Global.PcDT.Rows[index]["author_id"].ToString();
+                CPUTextBox.Text = Global.PcDT.Rows[index]["cpu"].ToString();
+                MBTextBox.Text = Global.PcDT.Rows[index]["mb"].ToString();
+                RAMTextBox.Text = Global.PcDT.Rows[index]["ram"].ToString();
+                GPUTextBox.Text = Global.PcDT.Rows[index]["gpu"].ToString();
+                SSDTextBox.Text = Global.PcDT.Rows[index]["ssd"].ToString();
+                HDDTextBox.Text = Global.PcDT.Rows[index]["hdd"].ToString();
+                PSUTextBox.Text = Global.PcDT.Rows[index]["psu"].ToString();
+                COOLERTextBox.Text = Global.PcDT.Rows[index]["cooling"].ToString();
+                CASETextBox.Text = Global.PcDT.Rows[index]["case"].ToString();
+            }
         }
 
         private void AddButton_Click(object sender, EventArgs e)

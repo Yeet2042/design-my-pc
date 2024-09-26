@@ -28,20 +28,23 @@ namespace DesignMyPC.InsideDashboard
         {
             index = e.RowIndex;
 
-            IDTextBox.Text = Global.UserDT.Rows[index]["id"].ToString();
-            NameTextBox.Text = Global.UserDT.Rows[index]["name"].ToString();
-            SurNameTextBox.Text = Global.UserDT.Rows[index]["surname"].ToString();
-            BirthPicker.Value = DateTime.Parse(Global.UserDT.Rows[index]["birth"].ToString());
-            UsernameTextBox.Text = Global.UserDT.Rows[index]["username"].ToString();
-            EmailTextBox.Text = Global.UserDT.Rows[index]["email"].ToString();
-            PasswordTextBox.Text = Global.UserDT.Rows[index]["password"].ToString();
-            if (Global.UserDT.Rows[index]["role"].ToString() == "admin")
+            if (index >= 0 && index < Global.UserDT.Rows.Count)
             {
-                AdminRadioButton.Checked = true;
-            }
-            else
-            {
-                UserRadioButton.Checked = true;
+                IDTextBox.Text = Global.UserDT.Rows[index]["id"].ToString();
+                NameTextBox.Text = Global.UserDT.Rows[index]["name"].ToString();
+                SurNameTextBox.Text = Global.UserDT.Rows[index]["surname"].ToString();
+                BirthPicker.Value = DateTime.Parse(Global.UserDT.Rows[index]["birth"].ToString());
+                UsernameTextBox.Text = Global.UserDT.Rows[index]["username"].ToString();
+                EmailTextBox.Text = Global.UserDT.Rows[index]["email"].ToString();
+                PasswordTextBox.Text = Global.UserDT.Rows[index]["password"].ToString();
+                if (Global.UserDT.Rows[index]["role"].ToString() == "admin")
+                {
+                    AdminRadioButton.Checked = true;
+                }
+                else
+                {
+                    UserRadioButton.Checked = true;
+                }
             }
         }
 
