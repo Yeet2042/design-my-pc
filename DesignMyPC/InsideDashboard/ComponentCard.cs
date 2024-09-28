@@ -14,7 +14,10 @@ namespace DesignMyPC.InsideDashboard
 {
     public partial class ComponentCard : Form
     {
+        private string Type;
+        public string ID;
         public ComponentCard(
+            string id,
             string type, 
             string brand, 
             string serie, 
@@ -75,6 +78,9 @@ namespace DesignMyPC.InsideDashboard
         )
         {
             InitializeComponent();
+
+            Type = type;
+            ID = id;
 
             ComponentName.Text = brand + " " + serie + " " + model;
 
@@ -252,6 +258,14 @@ namespace DesignMyPC.InsideDashboard
             ComponentLabel2.Left = startComponentLabel + ComponentLabel1.Width + space2;
             ComponentLabel3.Left = startComponentLabel + ComponentLabel1.Width + ComponentLabel2.Width + 2 * space2;
 
+        }
+
+        private void ComponentCard_Click(object sender, EventArgs e)
+        {
+            if (Type == "CPU")
+            {
+                DesignPage.CPUSelected = ID;
+            }
         }
     }
 }

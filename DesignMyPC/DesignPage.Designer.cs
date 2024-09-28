@@ -32,7 +32,7 @@
             this.PageLabel = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.DashboardContainer = new System.Windows.Forms.Panel();
+            this.DesignContainer = new System.Windows.Forms.Panel();
             this.CreateButton = new System.Windows.Forms.Button();
             this.CPUButton = new System.Windows.Forms.Button();
             this.MBButton = new System.Windows.Forms.Button();
@@ -50,6 +50,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PCNameTextBox = new System.Windows.Forms.TextBox();
+            this.BackToDashboard = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -104,12 +105,12 @@
             this.label11.TabIndex = 29;
             this.label11.Text = "สวัสดี,";
             // 
-            // DashboardContainer
+            // DesignContainer
             // 
-            this.DashboardContainer.Location = new System.Drawing.Point(320, 128);
-            this.DashboardContainer.Name = "DashboardContainer";
-            this.DashboardContainer.Size = new System.Drawing.Size(640, 560);
-            this.DashboardContainer.TabIndex = 31;
+            this.DesignContainer.Location = new System.Drawing.Point(320, 128);
+            this.DesignContainer.Name = "DesignContainer";
+            this.DesignContainer.Size = new System.Drawing.Size(640, 560);
+            this.DesignContainer.TabIndex = 31;
             // 
             // CreateButton
             // 
@@ -359,12 +360,29 @@
             this.PCNameTextBox.Size = new System.Drawing.Size(175, 24);
             this.PCNameTextBox.TabIndex = 3;
             // 
+            // BackToDashboard
+            // 
+            this.BackToDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(182)))), ((int)(((byte)(194)))));
+            this.BackToDashboard.FlatAppearance.BorderSize = 0;
+            this.BackToDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackToDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackToDashboard.ForeColor = System.Drawing.Color.White;
+            this.BackToDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BackToDashboard.Location = new System.Drawing.Point(978, 594);
+            this.BackToDashboard.Name = "BackToDashboard";
+            this.BackToDashboard.Size = new System.Drawing.Size(270, 44);
+            this.BackToDashboard.TabIndex = 43;
+            this.BackToDashboard.Text = "กลับสู่หน้าหลัก";
+            this.BackToDashboard.UseVisualStyleBackColor = false;
+            this.BackToDashboard.Click += new System.EventHandler(this.BackToDashboard_Click);
+            // 
             // DesignPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.BackToDashboard);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CASEButton);
             this.Controls.Add(this.COOLERButton);
@@ -376,7 +394,7 @@
             this.Controls.Add(this.MBButton);
             this.Controls.Add(this.CPUButton);
             this.Controls.Add(this.CreateButton);
-            this.Controls.Add(this.DashboardContainer);
+            this.Controls.Add(this.DesignContainer);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox1);
@@ -407,9 +425,9 @@
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel DashboardContainer;
+        private System.Windows.Forms.Panel DesignContainer;
         private System.Windows.Forms.Button CreateButton;
-        private System.Windows.Forms.Button CPUButton;
+        public System.Windows.Forms.Button CPUButton;
         private System.Windows.Forms.Button MBButton;
         private System.Windows.Forms.Button RAMButton;
         private System.Windows.Forms.Button HDDButton;
@@ -421,5 +439,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox PCNameTextBox;
+        private System.Windows.Forms.Button BackToDashboard;
     }
 }

@@ -222,6 +222,7 @@ namespace DesignMyPC.InsideDashboard
                     if (i < FilteredCPU_DT.Rows.Count)
                     {
                         card = new ComponentCard(
+                            FilteredCPU_DT.Rows[i]["id"].ToString(),
                             FilteredCPU_DT.Rows[i]["type"].ToString(),
                             FilteredCPU_DT.Rows[i]["brand"].ToString(),
                             FilteredCPU_DT.Rows[i]["serie"].ToString(),
@@ -290,6 +291,7 @@ namespace DesignMyPC.InsideDashboard
                     {
                         int mbI = i - FilteredCPU_DT.Rows.Count;
                         card = new ComponentCard(
+                            FilteredMB_DT.Rows[mbI]["id"].ToString(),
                             FilteredMB_DT.Rows[mbI]["type"].ToString(),
                             FilteredMB_DT.Rows[mbI]["brand"].ToString(),
                             FilteredMB_DT.Rows[mbI]["serie"].ToString(),
@@ -359,6 +361,7 @@ namespace DesignMyPC.InsideDashboard
                     {
                         int ramI = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count);
                         card = new ComponentCard(
+                            FilteredRAM_DT.Rows[ramI]["id"].ToString(),
                             FilteredRAM_DT.Rows[ramI]["type"].ToString(),
                             FilteredRAM_DT.Rows[ramI]["brand"].ToString(),
                             FilteredRAM_DT.Rows[ramI]["serie"].ToString(),
@@ -429,6 +432,7 @@ namespace DesignMyPC.InsideDashboard
                     {
                         int I = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count + FilteredRAM_DT.Rows.Count);
                         card = new ComponentCard(
+                            FilteredGPU_DT.Rows[I]["id"].ToString(),
                             FilteredGPU_DT.Rows[I]["type"].ToString(),
                             FilteredGPU_DT.Rows[I]["subBrand"].ToString(),
                             FilteredGPU_DT.Rows[I]["serie"].ToString(),
@@ -500,6 +504,7 @@ namespace DesignMyPC.InsideDashboard
                     {
                         int I = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count + FilteredRAM_DT.Rows.Count + FilteredGPU_DT.Rows.Count);
                         card = new ComponentCard(
+                            FilteredSSD_DT.Rows[I]["id"].ToString(),
                             FilteredSSD_DT.Rows[I]["type"].ToString(),
                             FilteredSSD_DT.Rows[I]["brand"].ToString(),
                             FilteredSSD_DT.Rows[I]["serie"].ToString(),
@@ -572,6 +577,7 @@ namespace DesignMyPC.InsideDashboard
                     {
                         int I = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count + FilteredRAM_DT.Rows.Count + FilteredGPU_DT.Rows.Count + FilteredSSD_DT.Rows.Count);
                         card = new ComponentCard(
+                            FilteredHDD_DT.Rows[I]["id"].ToString(),
                             FilteredHDD_DT.Rows[I]["type"].ToString(),
                             FilteredHDD_DT.Rows[I]["brand"].ToString(),
                             FilteredHDD_DT.Rows[I]["serie"].ToString(),
@@ -645,6 +651,7 @@ namespace DesignMyPC.InsideDashboard
                     {
                         int I = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count + FilteredRAM_DT.Rows.Count + FilteredGPU_DT.Rows.Count + FilteredSSD_DT.Rows.Count + FilteredHDD_DT.Rows.Count);
                         card = new ComponentCard(
+                            FilteredPSU_DT.Rows[I]["id"].ToString(),
                             FilteredPSU_DT.Rows[I]["type"].ToString(),
                             FilteredPSU_DT.Rows[I]["brand"].ToString(),
                             FilteredPSU_DT.Rows[I]["serie"].ToString(),
@@ -719,6 +726,7 @@ namespace DesignMyPC.InsideDashboard
                     {
                         int I = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count + FilteredRAM_DT.Rows.Count + FilteredGPU_DT.Rows.Count + FilteredSSD_DT.Rows.Count + FilteredHDD_DT.Rows.Count + FilteredPSU_DT.Rows.Count);
                         card = new ComponentCard(
+                            FilteredCOOLER_DT.Rows[I]["id"].ToString(),
                             FilteredCOOLER_DT.Rows[I]["type"].ToString(),
                             FilteredCOOLER_DT.Rows[I]["brand"].ToString(),
                             FilteredCOOLER_DT.Rows[I]["serie"].ToString(),
@@ -794,6 +802,7 @@ namespace DesignMyPC.InsideDashboard
                     {
                         int I = i - (FilteredCPU_DT.Rows.Count + FilteredMB_DT.Rows.Count + FilteredRAM_DT.Rows.Count + FilteredGPU_DT.Rows.Count + FilteredSSD_DT.Rows.Count + FilteredHDD_DT.Rows.Count + FilteredPSU_DT.Rows.Count + FilteredCOOLER_DT.Rows.Count);
                         card = new ComponentCard(
+                            FilteredCASE_DT.Rows[I]["id"].ToString(),
                             FilteredCASE_DT.Rows[I]["type"].ToString(),
                             FilteredCASE_DT.Rows[I]["brand"].ToString(),
                             FilteredCASE_DT.Rows[I]["serie"].ToString(),

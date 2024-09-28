@@ -113,6 +113,60 @@
     <Compile Include="InsideDashboard\SettingPage.Designer.cs">
       <DependentUpon>SettingPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="InsideDesign\Case.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDesign\Case.Designer.cs">
+      <DependentUpon>Case.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsideDesign\cooler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDesign\cooler.Designer.cs">
+      <DependentUpon>cooler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsideDesign\cpu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDesign\cpu.Designer.cs">
+      <DependentUpon>cpu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsideDesign\gpu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDesign\gpu.Designer.cs">
+      <DependentUpon>gpu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsideDesign\hdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDesign\hdd.Designer.cs">
+      <DependentUpon>hdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsideDesign\mb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDesign\mb.Designer.cs">
+      <DependentUpon>mb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsideDesign\psu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDesign\psu.Designer.cs">
+      <DependentUpon>psu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsideDesign\ram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDesign\ram.Designer.cs">
+      <DependentUpon>ram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsideDesign\ssd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsideDesign\ssd.Designer.cs">
+      <DependentUpon>ssd.cs</DependentUpon>
+    </Compile>
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InsideDashboard\SettingPage.resx">
       <DependentUpon>SettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsideDesign\cpu.resx">
+      <DependentUpon>cpu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LandingPage.resx">
       <DependentUpon>LandingPage.cs</DependentUpon>
@@ -333,9 +390,7 @@
   <ItemGroup>
     <None Include="Resources\nvidia_gpu_90px.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="InsideDesign\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\edit_icon_24px.png" />
   </ItemGroup>

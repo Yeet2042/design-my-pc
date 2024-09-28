@@ -130,7 +130,7 @@ namespace DesignMyPC.InsideDashboard
                         FilteredPcDT.Rows[i]["efficient"].ToString(),
                         FilteredPcDT.Rows[i]["price"].ToString());
 
-                    card.TopLevel = false; // กำหนดให้เป็น child control
+                    card.TopLevel = false;
                     panel.Controls.Add(card);
                     card.Show();
                 }

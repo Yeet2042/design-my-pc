@@ -154,6 +154,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ComponentCard";
             this.Text = "ComponentCard";
+            this.Click += new System.EventHandler(this.ComponentCard_Click);
             ((System.ComponentModel.ISupportInitialize)(this.ComponentImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
