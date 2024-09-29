@@ -273,8 +273,43 @@ namespace DesignMyPC.InsideDashboard
                 }
                 else if (Type == "MB")
                 {
-                    DesignPage.CPUSelected = ID;
+                    DesignPage.MBSelected = ID;
                     MessageBox.Show("เลือก MB: " + SelectedComponentName);
+                }
+                else if (Type == "RAM")
+                {
+                    DesignPage.RAMSelected = ID;
+                    MessageBox.Show("เลือก RAM: " + SelectedComponentName);
+                }
+                else if (Type == "GPU")
+                {
+                    DesignPage.GPUSelected = ID;
+                    MessageBox.Show("เลือก GPU: " + SelectedComponentName);
+                }
+                else if (Type == "SSD")
+                {
+                    DesignPage.SSDSelected = ID;
+                    MessageBox.Show("เลือก SSD: " + SelectedComponentName);
+                }
+                else if (Type == "HDD")
+                {
+                    DesignPage.HDDSelected = ID;
+                    MessageBox.Show("เลือก HDD: " + SelectedComponentName);
+                }
+                else if (Type == "PSU")
+                {
+                    DesignPage.PSUSelected = ID;
+                    MessageBox.Show("เลือก PSU: " + SelectedComponentName);
+                }
+                else if (Type == "CL")
+                {
+                    DesignPage.COOLERSelected = ID;
+                    MessageBox.Show("เลือก CPU COOLER: " + SelectedComponentName);
+                }
+                else if (Type == "CASE")
+                {
+                    DesignPage.CASESelected = ID;
+                    MessageBox.Show("เลือก CASE: " + SelectedComponentName);
                 }
             }
         }

@@ -139,6 +139,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "cooler";
             this.Text = "cooler";
+            this.Load += new System.EventHandler(this.cooler_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

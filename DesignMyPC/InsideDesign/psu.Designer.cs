@@ -139,6 +139,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "psu";
             this.Text = "psu";
+            this.Load += new System.EventHandler(this.psu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace DesignMyPC
 {
@@ -28,6 +29,16 @@ namespace DesignMyPC
             InitializeComponent();
             CPUButton.BackColor = Color.FromArgb(42, 54, 80);
             PageLabel.Text = Global.DesignSelectionPage;
+            PCNameTextBox.Text = Global.AutoID("PC", Global.PcDT);
+
+            if (Global.LogInRole == "admin")
+            {
+                NameLabel.ForeColor = Color.FromArgb(198, 120, 221);
+            }
+            else
+            {
+                NameLabel.ForeColor = Color.FromArgb(86, 182, 194);
+            }
 
             OpenCPU();
         }
@@ -41,7 +52,6 @@ namespace DesignMyPC
         {
             Global.MinimizeApplication();
         }
-
         private void OpenCPU()
         {
             InsideDesign.cpu cpu = new InsideDesign.cpu();

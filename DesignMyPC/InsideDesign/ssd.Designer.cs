@@ -139,6 +139,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ssd";
             this.Text = "ssd";
+            this.Load += new System.EventHandler(this.ssd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

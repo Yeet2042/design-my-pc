@@ -139,6 +139,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Case";
             this.Text = "Case";
+            this.Load += new System.EventHandler(this.Case_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
