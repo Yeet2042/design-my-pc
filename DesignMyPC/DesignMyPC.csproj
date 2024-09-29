@@ -229,8 +229,29 @@
     <EmbeddedResource Include="InsideDesign\Case.resx">
       <DependentUpon>Case.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InsideDesign\cooler.resx">
+      <DependentUpon>cooler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InsideDesign\cpu.resx">
       <DependentUpon>cpu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsideDesign\gpu.resx">
+      <DependentUpon>gpu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsideDesign\hdd.resx">
+      <DependentUpon>hdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsideDesign\mb.resx">
+      <DependentUpon>mb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsideDesign\psu.resx">
+      <DependentUpon>psu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsideDesign\ram.resx">
+      <DependentUpon>ram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsideDesign\ssd.resx">
+      <DependentUpon>ssd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LandingPage.resx">
       <DependentUpon>LandingPage.cs</DependentUpon>

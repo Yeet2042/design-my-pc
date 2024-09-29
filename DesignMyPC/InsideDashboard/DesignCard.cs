@@ -19,6 +19,7 @@ namespace DesignMyPC.InsideDashboard
 
         private void DesignButton_Click(object sender, EventArgs e)
         {
+            Global.DashboardSelectedPage = "ออกแบบ";
             DesignPage designPage = new DesignPage();
             designPage.TopLevel = false;
             Global.Design = designPage;

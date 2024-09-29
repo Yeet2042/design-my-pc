@@ -140,11 +140,6 @@ namespace DesignMyPC.InsideDesign
             }
         }
 
-        private void cpu_Load(object sender, EventArgs e)
-        {
-            LoadCard();
-        }
-
         private void setButtonVisibility()
         {
             if (CurrentPage == 1)
@@ -178,5 +173,10 @@ namespace DesignMyPC.InsideDesign
             LoadCard();
             setButtonVisibility();
         }
+        private void cpu_Load(object sender, EventArgs e)
+        {
+            LoadCard();
+        }
+
     }
 }

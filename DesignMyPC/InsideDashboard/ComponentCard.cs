@@ -264,14 +264,18 @@ namespace DesignMyPC.InsideDashboard
 
         private void ComponentCard_Click(object sender, EventArgs e)
         {
-            if (Type == "CPU")
+            if (Global.DashboardSelectedPage == "ออกแบบ")
             {
-                DesignPage.CPUSelected = ID;
-                MessageBox.Show("เลือก CPU: " + SelectedComponentName);
-            } else if (Type == "MB")
-            {
-                DesignPage.CPUSelected = ID;
-                MessageBox.Show("เลือก MB: " + SelectedComponentName);
+                if (Type == "CPU")
+                {
+                    DesignPage.CPUSelected = ID;
+                    MessageBox.Show("เลือก CPU: " + SelectedComponentName);
+                }
+                else if (Type == "MB")
+                {
+                    DesignPage.CPUSelected = ID;
+                    MessageBox.Show("เลือก MB: " + SelectedComponentName);
+                }
             }
         }
     }
