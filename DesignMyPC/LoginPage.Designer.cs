@@ -50,6 +50,7 @@
             this.CloseButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -306,12 +307,22 @@
             this.label10.TabIndex = 20;
             this.label10.Text = "รหัสผ่าน";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(20, 607);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 91);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "ADMIN\r\nuser: admin\r\npass: admin\r\n\r\nUSER\r\nuser: user\r\npass: user";
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.MinimizeButton);
@@ -371,5 +382,6 @@
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

@@ -17,6 +17,7 @@ namespace DesignMyPC.InsideDashboard
         private string Type;
         public string ID;
         private string SelectedComponentName;
+        public int Price;
         public ComponentCard(
             string id,
             string type, 
@@ -82,6 +83,7 @@ namespace DesignMyPC.InsideDashboard
 
             Type = type;
             ID = id;
+            Price = Convert.ToInt32(price);
 
             ComponentName.Text = brand + " " + serie + " " + model;
             SelectedComponentName = brand + " " + serie + " " + model;
@@ -268,49 +270,68 @@ namespace DesignMyPC.InsideDashboard
             {
                 if (Type == "CPU")
                 {
-                    DesignPage.CPUSelected = ID;
+                    DesignPage.CPUSelected = SelectedComponentName;
+                    DesignPage.CPUPrice = Price;
                     MessageBox.Show("เลือก CPU: " + SelectedComponentName);
                 }
                 else if (Type == "MB")
                 {
-                    DesignPage.MBSelected = ID;
+                    DesignPage.MBSelected = SelectedComponentName;
+                    DesignPage.MBPrice = Price;
                     MessageBox.Show("เลือก MB: " + SelectedComponentName);
                 }
                 else if (Type == "RAM")
                 {
-                    DesignPage.RAMSelected = ID;
+                    DesignPage.RAMSelected = SelectedComponentName;
+                    DesignPage.RAMPrice = Price;
                     MessageBox.Show("เลือก RAM: " + SelectedComponentName);
                 }
                 else if (Type == "GPU")
                 {
-                    DesignPage.GPUSelected = ID;
+                    DesignPage.GPUSelected = SelectedComponentName;
+                    DesignPage.GPUPrice = Price;
                     MessageBox.Show("เลือก GPU: " + SelectedComponentName);
                 }
                 else if (Type == "SSD")
                 {
-                    DesignPage.SSDSelected = ID;
+                    DesignPage.SSDSelected = SelectedComponentName;
+                    DesignPage.SSDPrice = Price;
                     MessageBox.Show("เลือก SSD: " + SelectedComponentName);
                 }
                 else if (Type == "HDD")
                 {
-                    DesignPage.HDDSelected = ID;
+                    DesignPage.HDDSelected = SelectedComponentName;
+                    DesignPage.HDDPrice = Price;
                     MessageBox.Show("เลือก HDD: " + SelectedComponentName);
                 }
                 else if (Type == "PSU")
                 {
-                    DesignPage.PSUSelected = ID;
+                    DesignPage.PSUSelected = SelectedComponentName;
+                    DesignPage.PSUPrice = Price;
                     MessageBox.Show("เลือก PSU: " + SelectedComponentName);
                 }
                 else if (Type == "CL")
                 {
-                    DesignPage.COOLERSelected = ID;
+                    DesignPage.COOLERSelected = SelectedComponentName;
+                    DesignPage.COOLERPrice = Price;
                     MessageBox.Show("เลือก CPU COOLER: " + SelectedComponentName);
                 }
                 else if (Type == "CASE")
                 {
-                    DesignPage.CASESelected = ID;
+                    DesignPage.CASESelected = SelectedComponentName;
+                    DesignPage.CASEPrice = Price;
                     MessageBox.Show("เลือก CASE: " + SelectedComponentName);
                 }
+            }
+            else
+            {
+                MessageBox.Show(
+                    SelectedComponentName + "\n" +
+                    label1.Text + ": " + ComponentLabel1.Text + "\n" +
+                    label2.Text + ": " + ComponentLabel2.Text + "\n" +
+                    label3.Text + ": " + ComponentLabel3.Text + "\n" +
+                    "ราคา: " + Price + " บาท"
+                );
             }
         }
     }

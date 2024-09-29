@@ -124,8 +124,8 @@
   <data name="aio_90px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aio_90px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="left_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\left_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1X_ram_90px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1X_ram_90px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="M2_nvme_ssd_2px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M2_nvme_ssd_2px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -135,6 +135,9 @@
   </data>
   <data name="itx_case_90pz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\itx_case_90pz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pc_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pc_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="amd_gpu_90px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\amd_gpu_90px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,9 +196,6 @@
   <data name="guage_147px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guage_147px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="intel_cpu_90px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\intel_cpu_90px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -217,6 +217,9 @@
   <data name="atx_psu_90px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\atx_psu_90px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="edit_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="magnify_icon_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\magnify_icon_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -232,8 +235,8 @@
   <data name="jigsaw_147px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jigsaw_147px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1X_ram_90px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1X_ram_90px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mid_pc_90px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mid_pc_90px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,10 +244,10 @@
   <data name="user_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pc_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pc_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="left_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\left_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="edit_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PC_Picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PC_Picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

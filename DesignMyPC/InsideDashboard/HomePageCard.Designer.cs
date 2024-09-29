@@ -103,6 +103,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomePageCard";
             this.Text = "HomePageCard";
+            this.Click += new System.EventHandler(this.HomePageCard_Click);
             ((System.ComponentModel.ISupportInitialize)(this.PcImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

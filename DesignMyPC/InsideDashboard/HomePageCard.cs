@@ -12,9 +12,11 @@ namespace DesignMyPC.InsideDashboard
 {
     public partial class HomePageCard : Form
     {
-        public HomePageCard(string name, string cpu, string efficient, string price)
+        string PcID;
+        public HomePageCard(string pcID,string name, string cpu, string efficient, string price)
         {
             InitializeComponent();
+            PcID = pcID;
             PcName.Text = name;
             CPULabel.Text = cpu;
             EfficientLabel.Text = "ประสิทธิภาพ " + efficient.ToString() + " %";
@@ -45,5 +47,13 @@ namespace DesignMyPC.InsideDashboard
             PriceLabel.Left = (this.Width - PriceLabel.Width) / 2;
         }
 
+        private void HomePageCard_Click(object sender, EventArgs e)
+        {
+            SummaryPage summaryPage = new SummaryPage(PcID);
+            summaryPage.TopLevel = false;
+            Global.Summary = summaryPage;
+
+            Global.OpenSummary();
+        }
     }
 }

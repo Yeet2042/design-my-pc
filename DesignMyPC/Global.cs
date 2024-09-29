@@ -15,6 +15,7 @@ namespace DesignMyPC
         public static Form RegisterPage;
         public static Form Dashboard;
         public static Form Design;
+        public static Form Summary;
 
         public static DataTable UserDT = new DataTable();
         public static DataTable PcDT = new DataTable();
@@ -75,6 +76,13 @@ namespace DesignMyPC
             MainContainerPanel.Controls.Clear();
             MainContainerPanel.Controls.Add(Design);
             Design.Show();
+        }
+
+        public static void OpenSummary()
+        {
+            MainContainerPanel.Controls.Clear();
+            MainContainerPanel.Controls.Add(Summary);
+            Summary.Show();
         }
 
         public static string AutoID(string prefix, DataTable dt)

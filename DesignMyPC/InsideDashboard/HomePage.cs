@@ -125,6 +125,7 @@ namespace DesignMyPC.InsideDashboard
                 if (panel != null)
                 {
                     HomePageCard card = new HomePageCard(
+                        FilteredPcDT.Rows[i]["id"].ToString(),
                         FilteredPcDT.Rows[i]["name"].ToString(),
                         FilteredPcDT.Rows[i]["cpu"].ToString(),
                         FilteredPcDT.Rows[i]["efficient"].ToString(),

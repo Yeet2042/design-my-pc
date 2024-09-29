@@ -24,6 +24,16 @@ namespace DesignMyPC
         public static string COOLERSelected = "";
         public static string CASESelected = "";
 
+        public static int CPUPrice = 0;
+        public static int MBPrice = 0;
+        public static int RAMPrice = 0;
+        public static int GPUPrice = 0;
+        public static int SSDPrice = 0;
+        public static int HDDPrice = 0;
+        public static int PSUPrice = 0;
+        public static int COOLERPrice = 0;
+        public static int CASEPrice = 0;
+
         public DesignPage()
         {
             InitializeComponent();
@@ -39,6 +49,7 @@ namespace DesignMyPC
             {
                 NameLabel.ForeColor = Color.FromArgb(86, 182, 194);
             }
+            NameLabel.Text = Global.LogInName;
 
             OpenCPU();
         }
@@ -302,6 +313,35 @@ namespace DesignMyPC
             Global.Dashboard = dashBoard;
 
             Global.OpenDashboard();
+        }
+
+        private void CreateButton_Click(object sender, EventArgs e)
+        {
+            string pcID = Global.AutoID("PC", Global.PcDT);
+            Global.PcDT.Rows.Add(
+                pcID,
+                Global.LogInID,
+                PCNameTextBox.Text,
+                CPUSelected,
+                MBSelected,
+                RAMSelected,
+                GPUSelected,
+                SSDSelected,
+                HDDSelected,
+                PSUSelected,
+                COOLERSelected,
+                CASESelected,
+                CPUPrice + MBPrice + RAMPrice + GPUPrice + SSDPrice + HDDPrice + PSUPrice + COOLERPrice + CASEPrice,
+                100,
+                100,
+                500
+            );
+
+            SummaryPage summaryPage = new SummaryPage(pcID);
+            summaryPage.TopLevel = false;
+            Global.Summary = summaryPage;
+
+            Global.OpenSummary();
         }
     }
 }
