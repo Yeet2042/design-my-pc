@@ -309,8 +309,8 @@ namespace DesignMyPC.InsideDashboard
                 UpdatePage();
             }
 
-            CurrentPage = 0;
-            PageNumber.Text = (CurrentPage + 1).ToString();
+            CurrentPage = 1;
+            PageNumber.Text = CurrentPage.ToString();
 
             TotalPage();
             LoadCard();
