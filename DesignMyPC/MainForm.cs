@@ -49,7 +49,8 @@ namespace DesignMyPC
             string[] chipsetSet001 = { "A620", "B650", "B650E", "X670", "X670E", "X870", "X870E" };
             string chipset001 = string.Join(",", chipsetSet001);
             Global.CPU_DT.Rows.Add("CPU001", "CPU", "AMD", "Ryzen 9", "9950X", "AM5", chipset001, 16, 32, 4.3, 5.7, 5, 170, 100, 26290, "https://www.bnn.in.th/th/p/computer-hardware-diy/cpu-computer-hardware-diy/amd-cpu-computer-hardware-diy/amd-cpu-ryzen-9-9950x-43ghz-16c32t-am5-730143315272_zpqgko?ref=search-result");
-            Global.CPU_DT.Rows.Add("CPU002", "CPU", "INTEL", "Core I9", "14900K", "LGA 1700", "", 24, 32, 2.4, 6, 10, 125, 100, 22500, "https://www.jib.co.th/web/product/readProduct/63040/INTEL-CORE-I9-14900K--SOCKET-LGA-1700---%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2---CPU-COOLER-NOT-INCLUDED-");
+            Global.CPU_DT.Rows.Add("CPU002", "CPU", "AMD", "Ryzen 9", "7950X3D", "AM5", chipset001, 16, 32, 4.2, 5.7, 5, 120, 99, 22900, "https://www.bnn.in.th/th/p/computer-hardware-diy/cpu-computer-hardware-diy/amd-cpu-computer-hardware-diy/amd-cpu-ryzen-9-9950x-43ghz-16c32t-am5-730143315272_zpqgko?ref=search-result");
+            Global.CPU_DT.Rows.Add("CPU003", "CPU", "AMD", "Ryzen 7", "7800X3D", "AM5", chipset001, 8, 16, 4.2, 5.0, 5, 120, 80, 15600, "https://www.bnn.in.th/th/p/computer-hardware-diy/cpu-computer-hardware-diy/amd-cpu-computer-hardware-diy/amd-cpu-ryzen-9-9950x-43ghz-16c32t-am5-730143315272_zpqgko?ref=search-result");
 
             Global.MB_DT.Columns.Add("id", typeof(string));
             Global.MB_DT.Columns.Add("type", typeof(string));
@@ -70,6 +71,8 @@ namespace DesignMyPC
             Global.MB_DT.Columns.Add("link", typeof(string));
 
             Global.MB_DT.Rows.Add("MB001", "MB", "ASUS", "ROG STRIX", "AM5", "X670E", 4, 192, "DDR5", 2, 4, 4, "ATX", 24, 100, 18880, "https://www.jib.co.th/web/product/readProduct/56450/2597/MAINBOARD--%E0%B9%80%E0%B8%A1%E0%B8%99%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%94--ASUS-ROG-STRIX-X670E-E-GAMING-WIFI--SOCKET-AM5---ATX-");
+            Global.MB_DT.Rows.Add("MB002", "MB", "ASUS", "TUF GAMING", "AM5", "B650M", 4, 192, "DDR5", 1, 4, 2, "mATX", 17, 80, 4890, "https://www.jib.co.th/web/product/readProduct/56450/2597/MAINBOARD--%E0%B9%80%E0%B8%A1%E0%B8%99%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%94--ASUS-ROG-STRIX-X670E-E-GAMING-WIFI--SOCKET-AM5---ATX-");
+            Global.MB_DT.Rows.Add("MB003", "MB", "ASUS", "ROG STRIX", "AM5", "X670E-I", 2, 64, "DDR5", 1, 2, 2, "ITX", 24, 100, 15500, "https://www.jib.co.th/web/product/readProduct/56450/2597/MAINBOARD--%E0%B9%80%E0%B8%A1%E0%B8%99%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%94--ASUS-ROG-STRIX-X670E-E-GAMING-WIFI--SOCKET-AM5---ATX-");
 
             Global.RAM_DT.Columns.Add("id", typeof(string));
             Global.RAM_DT.Columns.Add("type", typeof(string));
@@ -87,6 +90,7 @@ namespace DesignMyPC
             Global.RAM_DT.Columns.Add("link", typeof(string));
 
             Global.RAM_DT.Rows.Add("RAM001", "RAM", "COSAIR", "Dominator Titanium", "DDR5", 64, "32x2", 6400, "32-40-40-84", "white", 2, 100 , 12790, "https://www.bnn.in.th/th/p/corsair-ram-pc-ddr5-64gb6400mhz-cl32-dominator-titanium-rgb-white-cmp64gx5m2b6400c32w-840006674467_z3q240?utm_source=notebookspec.com&utm_medium=referral&utm_campaign=ecom_notebookspec_PCcomponent_ram_corsair-dominator-titanium-rgb-ddr5-64gb-32gbx2-6400-white");
+            Global.RAM_DT.Rows.Add("RAM002", "RAM", "KINGSTON", "FURY", "DDR5", 32, "32x1", 6400, "32-40-40-84", "black", 2, 100 , 12790, "https://www.bnn.in.th/th/p/corsair-ram-pc-ddr5-64gb6400mhz-cl32-dominator-titanium-rgb-white-cmp64gx5m2b6400c32w-840006674467_z3q240?utm_source=notebookspec.com&utm_medium=referral&utm_campaign=ecom_notebookspec_PCcomponent_ram_corsair-dominator-titanium-rgb-ddr5-64gb-32gbx2-6400-white");
 
             Global.GPU_DT.Columns.Add("id", typeof(string));
             Global.GPU_DT.Columns.Add("type", typeof(string));
@@ -105,6 +109,8 @@ namespace DesignMyPC
             Global.GPU_DT.Columns.Add("link", typeof(string));
 
             Global.GPU_DT.Rows.Add("GPU001", "GPU", "NVIDIA", "ASUS", "ROG STRIX", "RTX 4090", 2235, 2640, "GDDR6X", 24, "X16", 1000, 100, 93900, "https://www.advice.co.th/product/graphic-card-vga-/nvidia-4000-series/vga-asus-geforce-rtx-4090-rog-strix-o24g-gaming-btf-24gb-gddr6x");
+            Global.GPU_DT.Rows.Add("GPU002", "GPU", "NVIDIA", "ASUS", "TUF GAMING", "RTX 4060Ti", 2625, 2655, "GDDR6", 8, "X16", 650, 65, 16900, "https://www.advice.co.th/product/graphic-card-vga-/nvidia-4000-series/vga-asus-geforce-rtx-4090-rog-strix-o24g-gaming-btf-24gb-gddr6x");
+            Global.GPU_DT.Rows.Add("GPU003", "GPU", "NVIDIA", "ASUS", "STRIX OC", "GTX 750Ti", 1124, 1124, "GDDR5", 2, "X16", 350, 20, 1090, "https://www.advice.co.th/product/graphic-card-vga-/nvidia-4000-series/vga-asus-geforce-rtx-4090-rog-strix-o24g-gaming-btf-24gb-gddr6x");
 
             Global.SSD_DT.Columns.Add("id", typeof(string));
             Global.SSD_DT.Columns.Add("type", typeof(string));
@@ -184,8 +190,6 @@ namespace DesignMyPC
             Global.CASE_DT.Columns.Add("price", typeof(int));
             Global.CASE_DT.Columns.Add("link", typeof(string));
 
-            Global.CASE_DT.Rows.Add("CASE001", "CASE", "NZXT", "H9", "Elite", "Mid-Tower", "ATX", "black", 8790, "https://www.bnn.in.th/th/p/nzxt-computer-case-h9-elite-black-cm-h91eb-01-810074842518_z73l86?utm_source=notebookspec.com&utm_medium=referral&utm_campaign=ecom_notebookspec_PCcomponent_case_nzxt-h9-elite-black");
-            Global.CASE_DT.Rows.Add("CASE001", "CASE", "NZXT", "H9", "Elite", "Mid-Tower", "ATX", "black", 8790, "https://www.bnn.in.th/th/p/nzxt-computer-case-h9-elite-black-cm-h91eb-01-810074842518_z73l86?utm_source=notebookspec.com&utm_medium=referral&utm_campaign=ecom_notebookspec_PCcomponent_case_nzxt-h9-elite-black");
             Global.CASE_DT.Rows.Add("CASE001", "CASE", "NZXT", "H9", "Elite", "Mid-Tower", "ATX", "black", 8790, "https://www.bnn.in.th/th/p/nzxt-computer-case-h9-elite-black-cm-h91eb-01-810074842518_z73l86?utm_source=notebookspec.com&utm_medium=referral&utm_campaign=ecom_notebookspec_PCcomponent_case_nzxt-h9-elite-black");
 
             Global.PcDT.Columns.Add("id", typeof(string));
