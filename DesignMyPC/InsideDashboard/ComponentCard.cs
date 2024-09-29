@@ -16,6 +16,7 @@ namespace DesignMyPC.InsideDashboard
     {
         private string Type;
         public string ID;
+        private string SelectedComponentName;
         public ComponentCard(
             string id,
             string type, 
@@ -83,6 +84,7 @@ namespace DesignMyPC.InsideDashboard
             ID = id;
 
             ComponentName.Text = brand + " " + serie + " " + model;
+            SelectedComponentName = brand + " " + serie + " " + model;
 
             if (type == "CPU")
             {
@@ -265,6 +267,11 @@ namespace DesignMyPC.InsideDashboard
             if (Type == "CPU")
             {
                 DesignPage.CPUSelected = ID;
+                MessageBox.Show("เลือก CPU: " + SelectedComponentName);
+            } else if (Type == "MB")
+            {
+                DesignPage.CPUSelected = ID;
+                MessageBox.Show("เลือก MB: " + SelectedComponentName);
             }
         }
     }

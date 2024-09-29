@@ -226,6 +226,9 @@
     <EmbeddedResource Include="InsideDashboard\SettingPage.resx">
       <DependentUpon>SettingPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InsideDesign\Case.resx">
+      <DependentUpon>Case.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InsideDesign\cpu.resx">
       <DependentUpon>cpu.cs</DependentUpon>
     </EmbeddedResource>

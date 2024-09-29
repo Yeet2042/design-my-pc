@@ -13,7 +13,7 @@ namespace DesignMyPC
 {
     public partial class DesignPage : Form
     {
-        public static string CPUSelected;
+        public static string CPUSelected = "";
         public static string MBSelected = "";
         public static string RAMSelected = "";
         public static string GPUSelected = "";
